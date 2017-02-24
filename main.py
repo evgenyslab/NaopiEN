@@ -198,6 +198,9 @@ if __name__ == '__main__':
 
     connWorks = testNaoConnection(NAOIP, NAOPort)
     print "Connection Worked: ",connWorks
+    raw_input('Pause for effect')
+    '''
     atexit.register(exitingProgram)
     if connWorks:
         main(NAOIP, NAOPort, name)
+    '''
