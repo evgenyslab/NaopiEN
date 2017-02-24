@@ -40,7 +40,7 @@ class BasicMotions:
         tts.setParameter("doubleVoiceLevel", 0)
         try:
             audioProxy = self.connectToProxy("ALAudioDevice")
-            audioProxy.setOutputVolume(0.8*100) #use 90%
+            audioProxy.setOutputVolume(0.92*100) #use 90%
         except Exception as e:
             print "No Audio device found"
             print e
@@ -615,8 +615,9 @@ class BasicMotions:
         else:
             return None
 
-    def sayAndPlay(self, emotion, sentence):
-        choice = random.sample(range(1,3),1)
+    def sayAndPlay(self, emotion, sentence, choice=[]):
+        if not choice:
+            choice = random.sample(range(1,3),1)[0]
         if emotion=='happy':
             # randomly choose b/t happy emotions
             if choice==1:

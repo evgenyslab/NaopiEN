@@ -43,7 +43,7 @@ def main(NAOip=[], NAOport=[], name=[]):
     questionsMed = random.sample(range(1,qMax[1]),qMax[1]-1)
     questionsLow = random.sample(range(1,qMax[2]),qMax[2]-1)
     # number of interactions in a sequence:
-    sequenceLength = 10
+    sequenceLength = 25
     # number of tasks:
     nTasks = 3
     tasks = ('H','M','L')
@@ -135,7 +135,12 @@ def main(NAOip=[], NAOport=[], name=[]):
         writer = csv.writer(csvfile, delimiter=',')
         writer.writerow(['END OF INTERACTION SEQUENCE',taskSequence,qS2,emotionSequenceText, st])
         writer.writerow(['END OF INTERACTION SEQUENCE','TASK SECQUENCE','QUESTION SEQUENCE','EMOTION SEQUENCE', st])
-        
+    
+    # ENDING THANKYOUS
+    naoMotions.naoStand()
+    formattedSentence = naoMotions.naoSayEmotion('Thank you for participating','happy', True)
+    naoMotions.sayAndPlay('happy',formattedSentence)
+
 
 
 def interactionInstance(naoMotions,genUtil,logFilePath, emotion, taskNum,questionNum,questionObj, interactionNumber):
@@ -153,13 +158,17 @@ def interactionInstance(naoMotions,genUtil,logFilePath, emotion, taskNum,questio
 
     print 'Robot will ask: ', qStr[0], '\nWith Emotion: ', emotion
     
-    formattedSentence = naoMotions.naoSayEmotion(qStr[0],emotion, True)
-    naoMotions.sayAndPlay(emotion,formattedSentence)
-    naoMotions.naoStand()
-    naoMotions.setEyeEmotion('hope')
+    loopback = True
+    while loopback:
+        formattedSentence = naoMotions.naoSayEmotion(qStr[0],emotion, True)
+        naoMotions.sayAndPlay(emotion,formattedSentence)
+        #naoMotions.naoStand()
+        #naoMotions.setEyeEmotion('hope')
+        # POST RECORDING:
+        ret = Parser.getChar("To record timestamp for POST use (t,f) for (true/false), q to repeat:", ('t','f','q'))
+        if ret != 'q':
+            loopback = False
 
-    # POST RECORDING:
-    ret = Parser.getChar("press 'T' to record timestamp for POST affect with success, or 'F' for false:", ('t','f'))
     # date-time stamp:
     ts = time.time()
     st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
