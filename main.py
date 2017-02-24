@@ -8,6 +8,7 @@ from GenUtil import GenUtil
 import NAOReactionChecker
 from ThreadedCheckers import ThreadedChecker
 from UserAffectGenerator import UserAffectGenerator
+import taskQuestions
 import json
 import atexit
 import time
@@ -36,9 +37,13 @@ def main(NAOip=[], NAOport=[], name=[]):
     # fearful = worried
     # Angry = stern
 
-    #naoMotions = BasicMotions(NAOip, NAOport) # should be able to use this...
-    #genUtil = GenUtil(naoMotions)
+    naoMotions = BasicMotions(NAOip, NAOport) # should be able to use this...
+    genUtil = GenUtil(naoMotions)
 
+    # get now to stand
+    naoMotions.naoSay("the quick brown fox did something.")
+    naoMotions.naoStand()
+    raw_input("BREAK")
 
     ###-----------End VARIABLE SETUP
 
@@ -125,7 +130,7 @@ def interactionInstance(logFilePath, emotion, taskNum,questionNum,questionObj):
         writer = csv.writer(csvfile, delimiter=',')
         writer.writerow(['POST',taskNum,questionNum,qStr,emotion,ret,st])
 
-    def testNaoConnection(NAOip, NAOport):
+def testNaoConnection(NAOip, NAOport):
     worked = False
     try:
         print NAOip, NAOport
@@ -153,27 +158,27 @@ def interactionInstance(logFilePath, emotion, taskNum,questionNum,questionObj):
     return worked
 
 
-    def connectToProxy(NAOip, NAOport, proxyName):
-            try:
-                proxy = ALProxy(proxyName, NAOip, NAOport)
-            except Exception, e:
-                print "Could not create Proxy to ", proxyName
-                print "Error was: ", e
-                proxy = ""
+def connectToProxy(NAOip, NAOport, proxyName):
+        try:
+            proxy = ALProxy(proxyName, NAOip, NAOport)
+        except Exception, e:
+            print "Could not create Proxy to ", proxyName
+            print "Error was: ", e
+            proxy = ""
 
-            return proxy
+        return proxy
 
-    def getNAOIP():
-        fileName = "ProgramDataFiles\_FSM_INPUT.json"
-        jsInput = FileUtilitiy.readFileToJSON(fileName)
-        naoIP = str(jsInput['naoIP'])
-        return naoIP
+def getNAOIP():
+    fileName = "ProgramDataFiles\_FSM_INPUT.json"
+    jsInput = FileUtilitiy.readFileToJSON(fileName)
+    naoIP = str(jsInput['naoIP'])
+    return naoIP
 
-    def exitingProgram():
-        print "Program Exiting..."
+def exitingProgram():
+    print "Program Exiting..."
 
 if __name__ == '__main__':
-    simulated = True
+    simulated = False
     name = "NAO"
     if simulated:
         #simulated NAO
@@ -184,13 +189,13 @@ if __name__ == '__main__':
         #real NAO
         if useLuke:
             NAOIP = "luke.local"
-            NAOIP = "192.168.1.135"
+            NAOIP = "192.168.1.37"
             name = "Luke"
         else:
             NAOIP = "leia.local"
             name = "Leia"
-        NAOIP = getNAOIP()
-        name = NAOIP[0:4]
+        #NAOIP = getNAOIP()
+        #name = NAOIP[0:4]
         print "Robot Name: ", name
         NAOPort = 9559
 
@@ -198,9 +203,6 @@ if __name__ == '__main__':
 
     connWorks = testNaoConnection(NAOIP, NAOPort)
     print "Connection Worked: ",connWorks
-    raw_input('Pause for effect')
-    '''
     atexit.register(exitingProgram)
     if connWorks:
         main(NAOIP, NAOPort, name)
-    '''
