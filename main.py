@@ -2,7 +2,8 @@ from naoqi import ALBroker
 from naoqi  import ALProxy
 
 import FileUtilitiy
-from BasicMotions import BasicMotions
+#from BasicMotions import BasicMotions
+from BasicMotions2 import BasicMotions
 from DietFitnessFSM import DietFitnessFSM
 from GenUtil import GenUtil
 import NAOReactionChecker
@@ -40,9 +41,12 @@ def main(NAOip=[], NAOport=[], name=[]):
     naoMotions = BasicMotions(NAOip, NAOport) # should be able to use this...
     genUtil = GenUtil(naoMotions)
 
-    # get now to stand
-    naoMotions.naoSay("the quick brown fox did something.")
+    # get now to stand and test vocals - looks like will work together.
+   
     naoMotions.naoStand()
+    naoMotions.naoSay("the quick brown fox did something.")
+    naoMotions.naoShakeHead()
+    #naoMotions.happyEmotion()
     raw_input("BREAK")
 
     ###-----------End VARIABLE SETUP
