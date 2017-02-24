@@ -1,44 +1,42 @@
-1	Have you eaten today? What did you have for breakfast?
-1	I don't have any teeth. How often do you floss your teeth?
-1	How many steps have you done today? Do you think it is over 5000?
-1	I know Tia-Chi and practice it often. What sport do you like? Do you play it often?
-1	Do you enjoy exercise? Have you climbed 5 flights of stairs today?
-1	What healthy food you like? Have you cooked and eaten a healthy meal in the last 24 hours?
-1	I heard fried food is delicious. But so bad for you. Do you like fried food? What is your favourite? Have you eaten fried food in the last 24 hours?
-1	Have you paid your rent for the last month? Do you find it expensive?
-1	Have you paid your utilities for the last month? Do you find it expensive?
-1	How often do you usually go grocery shopping?
-1	Are you planning to go out for a meal today? Where would you go if you did?
-1	Are you planning to cook a meal today? Is there something you like or dislike about cooking?
-1	Are you planning to buy groceries in the next few days? What do you think you will buy?
-1	Are you planning to have lunch today? And if so, what do you plan to eat?
-1	Are you planning to have dinner today? And if so, what do you plan to eat?
-2	If you had to teach someone one thing, what would you teach and to whom would you teach it?
-2	How much time are you spending on social media? What is your favourite form of social media?
-2	If you could spend 15 minutes with anyone, living or dead, who would it be? What would you talk about?
-2	If you had unlimited resources, how would you live your life?
-2	What do you want your life to look like in 5 years? Do you have a plan to get there?
+1	Have you eaten today?\\pau=500\\ What did you have for breakfast?
+1	I don't have any teeth.\\pau=500\\ How often do you floss yours?
+1	How many steps have you taken today?\\pau=500\\ Do you think it is over 3000?
+1	I know Tai Chee and practice it often.\\pau=500\\ What sport do you like?\\pau=500\\ Do you play it often?
+1	Do you enjoy exercise?\\pau=500\\ Have you climbed 5 flights of stairs today?
+1	What healthy food do you like?\\pau=500\\ Have you cooked and eaten a healthy meal in the past few days?
+1	I heard fried food is delicious, but so bad for you.\\pau=500\\ Do you like it, if so What is your favourite?\\pau=500\\ Have you eaten fried food in the past few days?
+1	Have you paid your rent for the last month?\\pau=500\\ Do you find it expensive?
+1	Have you paid your utilities for the last month?\\pau=500\\ How much are they?
+1	How often do you usually go grocery shopping?\\pau=500\\ What do you usually buy?
+1	Are you planning to go out for a meal today?\\pau=500\\ Where will you go if you do?
+1	Do you like cooking?\\pau=500\\ What is your favourite food to make.
+1	Are you planning to have dinner today,\\pau=300\\ if so, what do you plan to eat.
+2	If you had to teach someone one thing,\\pau=400\\ what would you teach and who will it be?
+2	How much time are you spending on social media?\\pau=500\\ What is your favourite platform to use?
+2	If you could spend 15 minutes with anyone, living or dead, who would you choose.\\pau=500\\ What would you talk about?
+2	What do you want your life to look like in 5 years?\\pau=500\\ Do you have a plan to get there?
 2	If today was the last day of your life, what would you want to do?
-2	Where would you like to live? Why haven’t you moved there?
-2	When is the last time you saw your best friend? Are you planning to go out with your best friend this week?
-2	Have you been to the movies recently? What did you see? Was it good?
-2	Have you ever been to the theatre to see the ballet, an opera or musicals? What was your favourite? If you have not gone, would you like to go?
-2	Have you played any interesting video games recently? If so, what were they? I like anything with dancing.
-2	Have you participated in any social events in the past week? What was it? Did you enjoy the event?
-2	Have you met any new people recently? Do you enjoy meeting new people?
-2	Have you read any interesting books lately? What is your favourite book of all time?
-3	My sister is Leia. We used to live together but now I live in a new building. Do you live with your parents or siblings?
+2	When is the last time you saw your best friend?\\pau=500\\ Are you planning to go out with them this week?
+2	Have you been to the movies recently?\\pau=500\\ Did you see anything good?
+2	Have you ever been to the theatre to see the ballet, the opera\\pau=300\\ or musicals?\\pau=500\\ What was your favourite?\\pau=500\\ If you have not gone, would you like to go.
+2	Have you played any interesting video games recently?\\pau=500\\ If so, which ones.\\pau=500\\ I like anything with dancing!
+2	Have you participated in any social events in the past week?\\pau=500\\ Which ones?\\pau=300\\ Did you enjoy them?
+2	Have you met anyone new lately?\\pau=500\\ Do you enjoy meeting new people?
+2	Have you read any interesting books recently?\\pau=500\\ Which one is your favourite?
+2	If you had unlimited resources, how would you live your life?
+2	Where would you like to live?\\pau=500\\ Why haven’t you moved there?
+3	My sister is Leia.\\pau=500\\ We used to live together, but now I live in a new building.\\pau=500\\ Do you live with your family.
 3	What bad habits do you want to break?
-3	What drives you to do better at something?
-3	If your entire life was a movie, what title would best fit?
+3	What do you like to do on the weekends?
 3	How would you describe yourself in 5 words?
-3	My favourite band is daft punk, Who is your favourite band and how long have you been listening to them?
-3	What is your favourite song? Why do you like it?
-3	My favourite subject is human psychology so I can understand people. What was your favourite subject in school?
-3	What is your current occupation? Mine is just being a robot.
-3	I was born in France. Where were you born?
-3	Do you live in the city? Where you prefer to live? City or county?
-3	When was the last time you tried something new? What was it?
-3	What is your favourite past-time activity? Do you do it often? If you answer no, why not?
-3	My name is Luke, What is your name? Do you like your name?
-3	I am almost two years old. How old are you? When is your birthday?
+3	My favourite music is from the chemical brothers,\\pau=500\\ Who is your favourite band and how long have you been listening to them.
+3	What is your favourite song?\\pau=500\\ Why do you like it?\\pau=500\\ I like robot rock
+3	My favourite subject is human psychology, so I can understand people.\\pau=500\\ What was your favourite subject in school.
+3	What is your current occupation?\\pau=500\\ Mine is just being a robot.
+3	I was born in France.\\pau=500\\ Where were you born?
+3	When was the last time you tried something new?\\pau=500\\ What was it?
+3	What is your favourite hobby?\\pau=500\\ Do you do it often?\\pau=500\\ If you answer no, why not?
+3	My name is Luke,\\pau=500\\ what is your name?\\pau=500\\ What is its meaning.
+3	I am almost two years old.\\pau=500\\ How old are you?\\pau=500\\ When is your birthday?
+3	If your entire life was a movie, what would be the title.
+3	Do you live in the city.\\pau=500\\ Where do you prefer to live, City or country-side.

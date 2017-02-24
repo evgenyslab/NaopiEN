@@ -53,6 +53,8 @@ class BasicMotions:
                              'hope':      100,
                              'anger':     55}
         #Valid Value: 50 to 400"\\
+        # SLOW IT DOWN (pitch/speed), add pause in text to speech! Pronounciation > 'life' 'live' 'best fit'
+
         self.ttsSpeed={      'default':   "\\rspd=100\\",
                              'happy':     "\\rspd=100\\",
                              'sad':       "\\rspd=70\\",

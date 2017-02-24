@@ -1,34 +1,176 @@
-NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 12:34:04
-NEW INTERACTION SEQUENCE,"[2, 1, 3, 3, 2, 1, 1, 2, 3]","[3, 12, 12, 7, 1, 1, 14, 2, 10]","['anger', 'anger', 'sad', 'fear', 'hope', 'hope', 'sad', 'happy', 'happy']",2017-02-24 12:34:04
-0,PRE,2,3,"['If you could spend 15 minutes with anyone, living or dead, who would it be? What would you talk about?']",anger,2017-02-24 12:34:07
-0,POST,2,3,"['If you could spend 15 minutes with anyone, living or dead, who would it be? What would you talk about?']",anger,t,2017-02-24 12:34:24
-1,PRE,1,12,['Are you planning to cook a meal today? Is there something you like or dislike about cooking?'],anger,2017-02-24 12:34:26
-1,POST,1,12,['Are you planning to cook a meal today? Is there something you like or dislike about cooking?'],anger,t,2017-02-24 12:34:51
-2,PRE,3,12,['When was the last time you tried something new? What was it?'],sad,2017-02-24 12:34:53
-2,POST,3,12,['When was the last time you tried something new? What was it?'],sad,t,2017-02-24 12:35:11
-3,PRE,3,7,['What is your favourite song? Why do you like it?'],fear,2017-02-24 12:35:14
-NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 12:35:59
-NEW INTERACTION SEQUENCE,"[3, 3, 1, 2, 1, 3, 1, 2, 2]","[6, 4, 8, 3, 10, 9, 11, 12, 10]","['anger', 'happy', 'fear', 'sad', 'hope', 'anger', 'fear', 'happy', 'sad']",2017-02-24 12:35:59
-0,PRE,3,6,"['My favourite band is daft punk, Who is your favourite band and how long have you been listening to them?']",anger,2017-02-24 12:36:01
-0,POST,3,6,"['My favourite band is daft punk, Who is your favourite band and how long have you been listening to them?']",anger,t,2017-02-24 12:36:19
-1,PRE,3,4,"['If your entire life was a movie, what title would best fit?']",happy,2017-02-24 12:36:20
-1,POST,3,4,"['If your entire life was a movie, what title would best fit?']",happy,t,2017-02-24 12:36:36
-2,PRE,1,8,['Have you paid your rent for the last month? Do you find it expensive?'],fear,2017-02-24 12:36:39
-2,POST,1,8,['Have you paid your rent for the last month? Do you find it expensive?'],fear,t,2017-02-24 12:36:53
-3,PRE,2,3,"['If you could spend 15 minutes with anyone, living or dead, who would it be? What would you talk about?']",sad,2017-02-24 12:36:55
-3,POST,2,3,"['If you could spend 15 minutes with anyone, living or dead, who would it be? What would you talk about?']",sad,t,2017-02-24 12:37:15
-4,PRE,1,10,['How often do you usually go grocery shopping?'],hope,2017-02-24 12:37:17
-4,POST,1,10,['How often do you usually go grocery shopping?'],hope,t,2017-02-24 12:37:31
-5,PRE,3,9,['What is your current occupation? Mine is just being a robot.'],anger,2017-02-24 12:37:34
-5,POST,3,9,['What is your current occupation? Mine is just being a robot.'],anger,t,2017-02-24 12:37:47
-6,PRE,1,11,['Are you planning to go out for a meal today? Where would you go if you did?'],fear,2017-02-24 12:37:49
-6,POST,1,11,['Are you planning to go out for a meal today? Where would you go if you did?'],fear,t,2017-02-24 12:38:09
-7,PRE,2,12,['Have you participated in any social events in the past week? What was it? Did you enjoy the event?'],happy,2017-02-24 12:38:11
-7,POST,2,12,['Have you participated in any social events in the past week? What was it? Did you enjoy the event?'],happy,t,2017-02-24 12:38:25
-8,PRE,2,10,"['Have you ever been to the theatre to see the ballet, an opera or musicals? What was your favourite? If you have not gone, would you like to go?']",sad,2017-02-24 12:38:27
-8,POST,2,10,"['Have you ever been to the theatre to see the ballet, an opera or musicals? What was your favourite? If you have not gone, would you like to go?']",sad,t,2017-02-24 12:38:51
-END OF INTERACTION SEQUENCE,"[3, 3, 1, 2, 1, 3, 1, 2, 2]","[6, 4, 8, 3, 10, 9, 11, 12, 10]","['anger', 'happy', 'fear', 'sad', 'hope', 'anger', 'fear', 'happy', 'sad']",2017-02-24 12:38:51
-END OF INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 12:38:51
-NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 12:42:43
-NEW INTERACTION SEQUENCE,"[1, 2, 2, 1, 2, 1, 2, 2, 3, 3, 2, 1, 1, 1, 3, 2, 3, 3, 1, 3, 1, 2, 2, 3, 3]","[9, 12, 13, 11, 6, 3, 10, 5, 12, 11, 9, 4, 7, 2, 2, 8, 6, 8, 12, 5, 6, 4, 11, 9, 13]","['hope', 'happy', 'happy', 'happy', 'fear', 'anger', 'fear', 'sad', 'anger', 'hope', 'happy', 'fear', 'hope', 'sad', 'fear', 'hope', 'anger', 'sad', 'anger', 'hope', 'sad', 'fear', 'anger', 'happy', 'sad']",2017-02-24 12:42:43
-0,PRE,1,9,['Have you paid your utilities for the last month? Do you find it expensive?'],hope,2017-02-24 12:42:45
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 16:57:31
+NEW INTERACTION SEQUENCE,"[3, 3, 1, 3, 3, 3, 2, 1, 1, 2, 2, 1, 1, 3, 2, 2, 1, 2, 2, 1]","[5, 8, 11, 12, 1, 9, 6, 8, 7, 12, 7, 3, 9, 4, 10, 4, 4, 9, 2, 5]","['happy', 'anger', 'sad', 'hope', 'anger', 'happy', 'fear', 'hope', 'hope', 'sad', 'sad', 'happy', 'hope', 'anger', 'fear', 'fear', 'happy', 'fear', 'anger', 'sad']",2017-02-24 16:57:31
+0,PRE,3,5,"['My favourite music is from the chemical brothers,\\\\pau=500\\\\ Who is your favourite band and how long have you been listening to them.']",happy,2017-02-24 16:57:39
+0,POST,3,5,"['My favourite music is from the chemical brothers,\\\\pau=500\\\\ Who is your favourite band and how long have you been listening to them.']",happy,t,2017-02-24 16:58:03
+1,PRE,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],anger,2017-02-24 16:58:04
+1,POST,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],anger,t,2017-02-24 16:58:23
+2,PRE,1,11,['Are you planning to go out for a meal today?\\\\pau=500\\\\ Where will you go if you do?'],sad,2017-02-24 16:58:25
+2,POST,1,11,['Are you planning to go out for a meal today?\\\\pau=500\\\\ Where will you go if you do?'],sad,t,2017-02-24 16:58:56
+3,PRE,3,12,"['My name is Luke,\\\\pau=500\\\\ what is your name?\\\\pau=500\\\\ What is its meaning.']",hope,2017-02-24 16:58:57
+3,POST,3,12,"['My name is Luke,\\\\pau=500\\\\ what is your name?\\\\pau=500\\\\ What is its meaning.']",hope,t,2017-02-24 16:59:12
+4,PRE,3,1,"['My sister is Leia.\\\\pau=500\\\\ We used to live together, but now I live in a new building.\\\\pau=500\\\\ Do you live with your family.']",anger,2017-02-24 16:59:13
+4,POST,3,1,"['My sister is Leia.\\\\pau=500\\\\ We used to live together, but now I live in a new building.\\\\pau=500\\\\ Do you live with your family.']",anger,t,2017-02-24 16:59:30
+5,PRE,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],happy,2017-02-24 16:59:33
+5,POST,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],happy,t,2017-02-24 16:59:47
+6,PRE,2,6,['When is the last time you saw your best friend?\\\\pau=500\\\\ Are you planning to go out with them this week?'],fear,2017-02-24 16:59:50
+6,POST,2,6,['When is the last time you saw your best friend?\\\\pau=500\\\\ Are you planning to go out with them this week?'],fear,t,2017-02-24 17:00:12
+7,PRE,1,8,['Have you paid your rent for the last month?\\\\pau=500\\\\ Do you find it expensive?'],hope,2017-02-24 17:00:14
+7,POST,1,8,['Have you paid your rent for the last month?\\\\pau=500\\\\ Do you find it expensive?'],hope,t,2017-02-24 17:00:28
+8,PRE,1,7,"['I heard fried food is delicious, but so bad for you.\\\\pau=500\\\\ Do you like it, if so What is your favourite?\\\\pau=500\\\\ Have you eaten fried food in the past few days?']",hope,2017-02-24 17:00:29
+8,POST,1,7,"['I heard fried food is delicious, but so bad for you.\\\\pau=500\\\\ Do you like it, if so What is your favourite?\\\\pau=500\\\\ Have you eaten fried food in the past few days?']",hope,t,2017-02-24 17:00:49
+9,PRE,2,12,['Have you read any interesting books recently?\\\\pau=500\\\\ Which one is your favourite?'],sad,2017-02-24 17:00:52
+9,POST,2,12,['Have you read any interesting books recently?\\\\pau=500\\\\ Which one is your favourite?'],sad,t,2017-02-24 17:01:10
+10,PRE,2,7,['Have you been to the movies recently?\\\\pau=500\\\\ Did you see anything good?'],sad,2017-02-24 17:01:10
+10,POST,2,7,['Have you been to the movies recently?\\\\pau=500\\\\ Did you see anything good?'],sad,t,2017-02-24 17:01:29
+11,PRE,1,3,['How many steps have you taken today?\\\\pau=500\\\\ Do you think it is over 3000?'],happy,2017-02-24 17:01:30
+11,POST,1,3,['How many steps have you taken today?\\\\pau=500\\\\ Do you think it is over 3000?'],happy,t,2017-02-24 17:01:49
+12,PRE,1,9,['Have you paid your utilities for the last month?\\\\pau=500\\\\ How much are they?'],hope,2017-02-24 17:01:51
+12,POST,1,9,['Have you paid your utilities for the last month?\\\\pau=500\\\\ How much are they?'],hope,t,2017-02-24 17:02:05
+13,PRE,3,4,['How would you describe yourself in 5 words?'],anger,2017-02-24 17:02:07
+13,POST,3,4,['How would you describe yourself in 5 words?'],anger,f,2017-02-24 17:02:27
+14,PRE,2,10,['Have you participated in any social events in the past week?\\\\pau=500\\\\ Which ones?\\\\pau=300\\\\ Did you enjoy them?'],fear,2017-02-24 17:02:28
+14,POST,2,10,['Have you participated in any social events in the past week?\\\\pau=500\\\\ Which ones?\\\\pau=300\\\\ Did you enjoy them?'],fear,t,2017-02-24 17:02:49
+15,PRE,2,4,['What do you want your life to look like in 5 years?\\\\pau=500\\\\ Do you have a plan to get there?'],fear,2017-02-24 17:02:50
+15,POST,2,4,['What do you want your life to look like in 5 years?\\\\pau=500\\\\ Do you have a plan to get there?'],fear,t,2017-02-24 17:03:10
+16,PRE,1,4,['I know Tai Chee and practice it often.\\\\pau=500\\\\ What sport do you like?\\\\pau=500\\\\ Do you play it often?'],happy,2017-02-24 17:03:11
+16,POST,1,4,['I know Tai Chee and practice it often.\\\\pau=500\\\\ What sport do you like?\\\\pau=500\\\\ Do you play it often?'],happy,t,2017-02-24 17:03:31
+17,PRE,2,9,"['Have you played any interesting video games recently?\\\\pau=500\\\\ If so, which ones.\\\\pau=500\\\\ I like anything with dancing!']",fear,2017-02-24 17:03:31
+17,POST,2,9,"['Have you played any interesting video games recently?\\\\pau=500\\\\ If so, which ones.\\\\pau=500\\\\ I like anything with dancing!']",fear,t,2017-02-24 17:03:51
+18,PRE,2,2,['How much time are you spending on social media?\\\\pau=500\\\\ What is your favourite platform to use?'],anger,2017-02-24 17:03:52
+18,POST,2,2,['How much time are you spending on social media?\\\\pau=500\\\\ What is your favourite platform to use?'],anger,t,2017-02-24 17:04:10
+19,PRE,1,5,['Do you enjoy exercise?\\\\pau=500\\\\ Have you climbed 5 flights of stairs today?'],sad,2017-02-24 17:04:11
+19,POST,1,5,['Do you enjoy exercise?\\\\pau=500\\\\ Have you climbed 5 flights of stairs today?'],sad,t,2017-02-24 17:04:28
+END OF INTERACTION SEQUENCE,"[3, 3, 1, 3, 3, 3, 2, 1, 1, 2, 2, 1, 1, 3, 2, 2, 1, 2, 2, 1]","[5, 8, 11, 12, 1, 9, 6, 8, 7, 12, 7, 3, 9, 4, 10, 4, 4, 9, 2, 5]","['happy', 'anger', 'sad', 'hope', 'anger', 'happy', 'fear', 'hope', 'hope', 'sad', 'sad', 'happy', 'hope', 'anger', 'fear', 'fear', 'happy', 'fear', 'anger', 'sad']",2017-02-24 17:04:28
+END OF INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 17:04:28
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 17:08:22
+NEW INTERACTION SEQUENCE,"[3, 3, 2, 1, 2, 1, 2, 3, 3, 2, 1, 1, 1, 1, 3, 2, 2, 3, 2, 3]","[8, 11, 5, 9, 9, 11, 7, 5, 9, 4, 8, 6, 2, 1, 4, 6, 3, 13, 13, 14]","['sad', 'happy', 'sad', 'happy', 'hope', 'hope', 'sad', 'hope', 'happy', 'happy', 'fear', 'fear', 'anger', 'hope', 'anger', 'sad', 'fear', 'anger', 'anger', 'fear']",2017-02-24 17:08:22
+0,PRE,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],sad,2017-02-24 17:08:29
+0,POST,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],sad,t,2017-02-24 17:09:20
+1,PRE,3,11,"['What is your favourite hobby?\\\\pau=500\\\\ Do you do it often?\\\\pau=500\\\\ If you answer no, why not?']",happy,2017-02-24 17:09:21
+1,POST,3,11,"['What is your favourite hobby?\\\\pau=500\\\\ Do you do it often?\\\\pau=500\\\\ If you answer no, why not?']",happy,t,2017-02-24 17:09:43
+2,PRE,2,5,"['If today was the last day of your life, what would you want to do?']",sad,2017-02-24 17:09:44
+2,POST,2,5,"['If today was the last day of your life, what would you want to do?']",sad,t,2017-02-24 17:10:12
+3,PRE,1,9,['Have you paid your utilities for the last month?\\\\pau=500\\\\ How much are they?'],happy,2017-02-24 17:10:16
+3,POST,1,9,['Have you paid your utilities for the last month?\\\\pau=500\\\\ How much are they?'],happy,t,2017-02-24 17:10:38
+4,PRE,2,9,"['Have you played any interesting video games recently?\\\\pau=500\\\\ If so, which ones.\\\\pau=500\\\\ I like anything with dancing!']",hope,2017-02-24 17:10:39
+4,POST,2,9,"['Have you played any interesting video games recently?\\\\pau=500\\\\ If so, which ones.\\\\pau=500\\\\ I like anything with dancing!']",hope,t,2017-02-24 17:10:57
+5,PRE,1,11,['Are you planning to go out for a meal today?\\\\pau=500\\\\ Where will you go if you do?'],hope,2017-02-24 17:10:58
+5,POST,1,11,['Are you planning to go out for a meal today?\\\\pau=500\\\\ Where will you go if you do?'],hope,t,2017-02-24 17:11:30
+6,PRE,2,7,['Have you been to the movies recently?\\\\pau=500\\\\ Did you see anything good?'],sad,2017-02-24 17:11:31
+6,POST,2,7,['Have you been to the movies recently?\\\\pau=500\\\\ Did you see anything good?'],sad,t,2017-02-24 17:12:20
+7,PRE,3,5,"['My favourite music is from the chemical brothers,\\\\pau=500\\\\ Who is your favourite band and how long have you been listening to them.']",hope,2017-02-24 17:12:21
+7,POST,3,5,"['My favourite music is from the chemical brothers,\\\\pau=500\\\\ Who is your favourite band and how long have you been listening to them.']",hope,t,2017-02-24 17:12:59
+8,PRE,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],happy,2017-02-24 17:13:00
+8,POST,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],happy,t,2017-02-24 17:13:13
+9,PRE,2,4,['What do you want your life to look like in 5 years?\\\\pau=500\\\\ Do you have a plan to get there?'],happy,2017-02-24 17:13:14
+9,POST,2,4,['What do you want your life to look like in 5 years?\\\\pau=500\\\\ Do you have a plan to get there?'],happy,t,2017-02-24 17:13:39
+10,PRE,1,8,['Have you paid your rent for the last month?\\\\pau=500\\\\ Do you find it expensive?'],fear,2017-02-24 17:13:42
+10,POST,1,8,['Have you paid your rent for the last month?\\\\pau=500\\\\ Do you find it expensive?'],fear,t,2017-02-24 17:14:16
+11,PRE,1,6,['What healthy food do you like?\\\\pau=500\\\\ Have you cooked and eaten a healthy meal in the past few days?'],fear,2017-02-24 17:14:19
+11,POST,1,6,['What healthy food do you like?\\\\pau=500\\\\ Have you cooked and eaten a healthy meal in the past few days?'],fear,f,2017-02-24 17:14:52
+12,PRE,1,2,"[""I don't have any teeth.\\\\pau=500\\\\ How often do you floss yours?""]",anger,2017-02-24 17:14:53
+12,POST,1,2,"[""I don't have any teeth.\\\\pau=500\\\\ How often do you floss yours?""]",anger,t,2017-02-24 17:15:14
+13,PRE,1,1,['Have you eaten today?\\\\pau=500\\\\ What did you have for breakfast?'],hope,2017-02-24 17:15:16
+13,POST,1,1,['Have you eaten today?\\\\pau=500\\\\ What did you have for breakfast?'],hope,t,2017-02-24 17:15:32
+14,PRE,3,4,['How would you describe yourself in 5 words?'],anger,2017-02-24 17:15:34
+14,POST,3,4,['How would you describe yourself in 5 words?'],anger,f,2017-02-24 17:16:37
+15,PRE,2,6,['When is the last time you saw your best friend?\\\\pau=500\\\\ Are you planning to go out with them this week?'],sad,2017-02-24 17:16:38
+15,POST,2,6,['When is the last time you saw your best friend?\\\\pau=500\\\\ Are you planning to go out with them this week?'],sad,t,2017-02-24 17:17:06
+16,PRE,2,3,"['If you could spend 15 minutes with anyone, living or dead, who would you choose.\\\\pau=500\\\\ What would you talk about?']",fear,2017-02-24 17:17:07
+16,POST,2,3,"['If you could spend 15 minutes with anyone, living or dead, who would you choose.\\\\pau=500\\\\ What would you talk about?']",fear,t,2017-02-24 17:17:34
+17,PRE,3,13,['I am almost two years old.\\\\pau=500\\\\ How old are you?\\\\pau=500\\\\ When is your birthday?'],anger,2017-02-24 17:17:35
+17,POST,3,13,['I am almost two years old.\\\\pau=500\\\\ How old are you?\\\\pau=500\\\\ When is your birthday?'],anger,t,2017-02-24 17:17:51
+18,PRE,2,13,"['If you had unlimited resources, how would you live your life?']",anger,2017-02-24 17:17:54
+18,POST,2,13,"['If you had unlimited resources, how would you live your life?']",anger,t,2017-02-24 17:18:53
+19,PRE,3,14,"['If your entire life was a movie, what would be the title.']",fear,2017-02-24 17:18:54
+19,POST,3,14,"['If your entire life was a movie, what would be the title.']",fear,t,2017-02-24 17:19:41
+END OF INTERACTION SEQUENCE,"[3, 3, 2, 1, 2, 1, 2, 3, 3, 2, 1, 1, 1, 1, 3, 2, 2, 3, 2, 3]","[8, 11, 5, 9, 9, 11, 7, 5, 9, 4, 8, 6, 2, 1, 4, 6, 3, 13, 13, 14]","['sad', 'happy', 'sad', 'happy', 'hope', 'hope', 'sad', 'hope', 'happy', 'happy', 'fear', 'fear', 'anger', 'hope', 'anger', 'sad', 'fear', 'anger', 'anger', 'fear']",2017-02-24 17:19:41
+END OF INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 17:19:41
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 17:22:10
+NEW INTERACTION SEQUENCE,"[2, 3, 1, 2, 2, 1, 1, 3, 2, 2, 1, 2, 1, 3, 3, 3, 3, 1, 3, 2]","[12, 13, 5, 4, 6, 12, 8, 1, 5, 2, 9, 10, 4, 14, 12, 2, 10, 6, 3, 11]","['anger', 'happy', 'anger', 'anger', 'sad', 'happy', 'hope', 'fear', 'sad', 'sad', 'fear', 'sad', 'happy', 'happy', 'fear', 'hope', 'fear', 'anger', 'hope', 'hope']",2017-02-24 17:22:10
+0,PRE,2,12,['Have you read any interesting books recently?\\\\pau=500\\\\ Which one is your favourite?'],anger,2017-02-24 17:22:20
+0,POST,2,12,['Have you read any interesting books recently?\\\\pau=500\\\\ Which one is your favourite?'],anger,t,2017-02-24 17:22:43
+1,PRE,3,13,['I am almost two years old.\\\\pau=500\\\\ How old are you?\\\\pau=500\\\\ When is your birthday?'],happy,2017-02-24 17:22:44
+1,POST,3,13,['I am almost two years old.\\\\pau=500\\\\ How old are you?\\\\pau=500\\\\ When is your birthday?'],happy,t,2017-02-24 17:23:03
+2,PRE,1,5,['Do you enjoy exercise?\\\\pau=500\\\\ Have you climbed 5 flights of stairs today?'],anger,2017-02-24 17:23:04
+2,POST,1,5,['Do you enjoy exercise?\\\\pau=500\\\\ Have you climbed 5 flights of stairs today?'],anger,t,2017-02-24 17:23:21
+3,PRE,2,4,['What do you want your life to look like in 5 years?\\\\pau=500\\\\ Do you have a plan to get there?'],anger,2017-02-24 17:23:22
+3,POST,2,4,['What do you want your life to look like in 5 years?\\\\pau=500\\\\ Do you have a plan to get there?'],anger,t,2017-02-24 17:23:48
+4,PRE,2,6,['When is the last time you saw your best friend?\\\\pau=500\\\\ Are you planning to go out with them this week?'],sad,2017-02-24 17:23:50
+4,POST,2,6,['When is the last time you saw your best friend?\\\\pau=500\\\\ Are you planning to go out with them this week?'],sad,t,2017-02-24 17:24:27
+5,PRE,1,12,['Do you like cooking?\\\\pau=500\\\\ What is your favourite food to make.'],happy,2017-02-24 17:24:30
+5,POST,1,12,['Do you like cooking?\\\\pau=500\\\\ What is your favourite food to make.'],happy,t,2017-02-24 17:24:55
+6,PRE,1,8,['Have you paid your rent for the last month?\\\\pau=500\\\\ Do you find it expensive?'],hope,2017-02-24 17:24:56
+6,POST,1,8,['Have you paid your rent for the last month?\\\\pau=500\\\\ Do you find it expensive?'],hope,t,2017-02-24 17:25:17
+7,PRE,3,1,"['My sister is Leia.\\\\pau=500\\\\ We used to live together, but now I live in a new building.\\\\pau=500\\\\ Do you live with your family.']",fear,2017-02-24 17:25:19
+7,POST,3,1,"['My sister is Leia.\\\\pau=500\\\\ We used to live together, but now I live in a new building.\\\\pau=500\\\\ Do you live with your family.']",fear,t,2017-02-24 17:25:39
+8,PRE,2,5,"['If today was the last day of your life, what would you want to do?']",sad,2017-02-24 17:25:40
+8,POST,2,5,"['If today was the last day of your life, what would you want to do?']",sad,t,2017-02-24 17:26:03
+9,PRE,2,2,['How much time are you spending on social media?\\\\pau=500\\\\ What is your favourite platform to use?'],sad,2017-02-24 17:26:04
+9,POST,2,2,['How much time are you spending on social media?\\\\pau=500\\\\ What is your favourite platform to use?'],sad,t,2017-02-24 17:26:27
+10,PRE,1,9,['Have you paid your utilities for the last month?\\\\pau=500\\\\ How much are they?'],fear,2017-02-24 17:26:28
+10,POST,1,9,['Have you paid your utilities for the last month?\\\\pau=500\\\\ How much are they?'],fear,t,2017-02-24 17:26:47
+11,PRE,2,10,['Have you participated in any social events in the past week?\\\\pau=500\\\\ Which ones?\\\\pau=300\\\\ Did you enjoy them?'],sad,2017-02-24 17:26:49
+11,POST,2,10,['Have you participated in any social events in the past week?\\\\pau=500\\\\ Which ones?\\\\pau=300\\\\ Did you enjoy them?'],sad,t,2017-02-24 17:27:22
+12,PRE,1,4,['I know Tai Chee and practice it often.\\\\pau=500\\\\ What sport do you like?\\\\pau=500\\\\ Do you play it often?'],happy,2017-02-24 17:27:26
+12,POST,1,4,['I know Tai Chee and practice it often.\\\\pau=500\\\\ What sport do you like?\\\\pau=500\\\\ Do you play it often?'],happy,t,2017-02-24 17:27:47
+13,PRE,3,14,"['If your entire life was a movie, what would be the title.']",happy,2017-02-24 17:27:50
+13,POST,3,14,"['If your entire life was a movie, what would be the title.']",happy,t,2017-02-24 17:28:07
+14,PRE,3,12,"['My name is Luke,\\\\pau=500\\\\ what is your name?\\\\pau=500\\\\ What is its meaning.']",fear,2017-02-24 17:28:10
+14,POST,3,12,"['My name is Luke,\\\\pau=500\\\\ what is your name?\\\\pau=500\\\\ What is its meaning.']",fear,t,2017-02-24 17:28:32
+15,PRE,3,2,['What bad habits do you want to break?'],hope,2017-02-24 17:28:34
+15,POST,3,2,['What bad habits do you want to break?'],hope,t,2017-02-24 17:28:56
+16,PRE,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],fear,2017-02-24 17:28:57
+16,POST,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],fear,t,2017-02-24 17:29:20
+17,PRE,1,6,['What healthy food do you like?\\\\pau=500\\\\ Have you cooked and eaten a healthy meal in the past few days?'],anger,2017-02-24 17:29:21
+17,POST,1,6,['What healthy food do you like?\\\\pau=500\\\\ Have you cooked and eaten a healthy meal in the past few days?'],anger,t,2017-02-24 17:29:40
+18,PRE,3,3,['What do you like to do on the weekends?'],hope,2017-02-24 17:29:42
+18,POST,3,3,['What do you like to do on the weekends?'],hope,t,2017-02-24 17:30:09
+19,PRE,2,11,['Have you met anyone new lately?\\\\pau=500\\\\ Do you enjoy meeting new people?'],hope,2017-02-24 17:30:12
+19,POST,2,11,['Have you met anyone new lately?\\\\pau=500\\\\ Do you enjoy meeting new people?'],hope,t,2017-02-24 17:30:32
+END OF INTERACTION SEQUENCE,"[2, 3, 1, 2, 2, 1, 1, 3, 2, 2, 1, 2, 1, 3, 3, 3, 3, 1, 3, 2]","[12, 13, 5, 4, 6, 12, 8, 1, 5, 2, 9, 10, 4, 14, 12, 2, 10, 6, 3, 11]","['anger', 'happy', 'anger', 'anger', 'sad', 'happy', 'hope', 'fear', 'sad', 'sad', 'fear', 'sad', 'happy', 'happy', 'fear', 'hope', 'fear', 'anger', 'hope', 'hope']",2017-02-24 17:30:32
+END OF INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 17:30:32
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 17:33:28
+NEW INTERACTION SEQUENCE,"[2, 3, 3, 2, 1, 1, 1, 2, 2, 3, 2, 1, 1, 3, 1, 3, 2, 3, 3, 1]","[3, 2, 13, 6, 7, 11, 3, 11, 12, 1, 9, 8, 12, 3, 6, 6, 8, 10, 14, 4]","['fear', 'happy', 'hope', 'hope', 'anger', 'sad', 'sad', 'sad', 'happy', 'anger', 'happy', 'hope', 'fear', 'anger', 'anger', 'fear', 'sad', 'fear', 'hope', 'happy']",2017-02-24 17:33:28
+0,PRE,2,3,"['If you could spend 15 minutes with anyone, living or dead, who would you choose.\\\\pau=500\\\\ What would you talk about?']",fear,2017-02-24 17:33:32
+0,POST,2,3,"['If you could spend 15 minutes with anyone, living or dead, who would you choose.\\\\pau=500\\\\ What would you talk about?']",fear,t,2017-02-24 17:34:29
+1,PRE,3,2,['What bad habits do you want to break?'],happy,2017-02-24 17:34:31
+1,POST,3,2,['What bad habits do you want to break?'],happy,t,2017-02-24 17:35:28
+2,PRE,3,13,['I am almost two years old.\\\\pau=500\\\\ How old are you?\\\\pau=500\\\\ When is your birthday?'],hope,2017-02-24 17:35:30
+2,POST,3,13,['I am almost two years old.\\\\pau=500\\\\ How old are you?\\\\pau=500\\\\ When is your birthday?'],hope,t,2017-02-24 17:35:46
+3,PRE,2,6,['When is the last time you saw your best friend?\\\\pau=500\\\\ Are you planning to go out with them this week?'],hope,2017-02-24 17:35:49
+3,POST,2,6,['When is the last time you saw your best friend?\\\\pau=500\\\\ Are you planning to go out with them this week?'],hope,t,2017-02-24 17:36:10
+4,PRE,1,7,"['I heard fried food is delicious, but so bad for you.\\\\pau=500\\\\ Do you like it, if so What is your favourite?\\\\pau=500\\\\ Have you eaten fried food in the past few days?']",anger,2017-02-24 17:36:13
+4,POST,1,7,"['I heard fried food is delicious, but so bad for you.\\\\pau=500\\\\ Do you like it, if so What is your favourite?\\\\pau=500\\\\ Have you eaten fried food in the past few days?']",anger,t,2017-02-24 17:36:38
+5,PRE,1,11,['Are you planning to go out for a meal today?\\\\pau=500\\\\ Where will you go if you do?'],sad,2017-02-24 17:36:39
+5,POST,1,11,['Are you planning to go out for a meal today?\\\\pau=500\\\\ Where will you go if you do?'],sad,t,2017-02-24 17:37:10
+6,PRE,1,3,['How many steps have you taken today?\\\\pau=500\\\\ Do you think it is over 3000?'],sad,2017-02-24 17:37:13
+6,POST,1,3,['How many steps have you taken today?\\\\pau=500\\\\ Do you think it is over 3000?'],sad,f,2017-02-24 17:37:30
+7,PRE,2,11,['Have you met anyone new lately?\\\\pau=500\\\\ Do you enjoy meeting new people?'],sad,2017-02-24 17:37:33
+7,POST,2,11,['Have you met anyone new lately?\\\\pau=500\\\\ Do you enjoy meeting new people?'],sad,t,2017-02-24 17:37:53
+8,PRE,2,12,['Have you read any interesting books recently?\\\\pau=500\\\\ Which one is your favourite?'],happy,2017-02-24 17:37:55
+8,POST,2,12,['Have you read any interesting books recently?\\\\pau=500\\\\ Which one is your favourite?'],happy,t,2017-02-24 17:39:19
+9,PRE,3,1,"['My sister is Leia.\\\\pau=500\\\\ We used to live together, but now I live in a new building.\\\\pau=500\\\\ Do you live with your family.']",anger,2017-02-24 17:39:22
+9,POST,3,1,"['My sister is Leia.\\\\pau=500\\\\ We used to live together, but now I live in a new building.\\\\pau=500\\\\ Do you live with your family.']",anger,t,2017-02-24 17:39:37
+10,PRE,2,9,"['Have you played any interesting video games recently?\\\\pau=500\\\\ If so, which ones.\\\\pau=500\\\\ I like anything with dancing!']",happy,2017-02-24 17:39:41
+10,POST,2,9,"['Have you played any interesting video games recently?\\\\pau=500\\\\ If so, which ones.\\\\pau=500\\\\ I like anything with dancing!']",happy,t,2017-02-24 17:40:02
+11,PRE,1,8,['Have you paid your rent for the last month?\\\\pau=500\\\\ Do you find it expensive?'],hope,2017-02-24 17:40:04
+11,POST,1,8,['Have you paid your rent for the last month?\\\\pau=500\\\\ Do you find it expensive?'],hope,t,2017-02-24 17:40:25
+12,PRE,1,12,['Do you like cooking?\\\\pau=500\\\\ What is your favourite food to make.'],fear,2017-02-24 17:40:26
+12,POST,1,12,['Do you like cooking?\\\\pau=500\\\\ What is your favourite food to make.'],fear,t,2017-02-24 17:40:42
+13,PRE,3,3,['What do you like to do on the weekends?'],anger,2017-02-24 17:40:45
+13,POST,3,3,['What do you like to do on the weekends?'],anger,t,2017-02-24 17:41:07
+14,PRE,1,6,['What healthy food do you like?\\\\pau=500\\\\ Have you cooked and eaten a healthy meal in the past few days?'],anger,2017-02-24 17:41:10
+14,POST,1,6,['What healthy food do you like?\\\\pau=500\\\\ Have you cooked and eaten a healthy meal in the past few days?'],anger,t,2017-02-24 17:41:33
+15,PRE,3,6,['What is your favourite song?\\\\pau=500\\\\ Why do you like it?\\\\pau=500\\\\ I like robot rock'],fear,2017-02-24 17:41:34
+15,POST,3,6,['What is your favourite song?\\\\pau=500\\\\ Why do you like it?\\\\pau=500\\\\ I like robot rock'],fear,t,2017-02-24 17:41:59
+16,PRE,2,8,"['Have you ever been to the theatre to see the ballet, the opera\\\\pau=300\\\\ or musicals?\\\\pau=500\\\\ What was your favourite?\\\\pau=500\\\\ If you have not gone, would you like to go.']",sad,2017-02-24 17:42:00
+16,POST,2,8,"['Have you ever been to the theatre to see the ballet, the opera\\\\pau=300\\\\ or musicals?\\\\pau=500\\\\ What was your favourite?\\\\pau=500\\\\ If you have not gone, would you like to go.']",sad,t,2017-02-24 17:43:40
+17,PRE,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],fear,2017-02-24 17:43:42
+17,POST,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],fear,t,2017-02-24 17:44:06
+18,PRE,3,14,"['If your entire life was a movie, what would be the title.']",hope,2017-02-24 17:44:08
+18,POST,3,14,"['If your entire life was a movie, what would be the title.']",hope,t,2017-02-24 17:44:44
+19,PRE,1,4,['I know Tai Chee and practice it often.\\\\pau=500\\\\ What sport do you like?\\\\pau=500\\\\ Do you play it often?'],happy,2017-02-24 17:44:45
+19,POST,1,4,['I know Tai Chee and practice it often.\\\\pau=500\\\\ What sport do you like?\\\\pau=500\\\\ Do you play it often?'],happy,t,2017-02-24 17:45:04
+END OF INTERACTION SEQUENCE,"[2, 3, 3, 2, 1, 1, 1, 2, 2, 3, 2, 1, 1, 3, 1, 3, 2, 3, 3, 1]","[3, 2, 13, 6, 7, 11, 3, 11, 12, 1, 9, 8, 12, 3, 6, 6, 8, 10, 14, 4]","['fear', 'happy', 'hope', 'hope', 'anger', 'sad', 'sad', 'sad', 'happy', 'anger', 'happy', 'hope', 'fear', 'anger', 'anger', 'fear', 'sad', 'fear', 'hope', 'happy']",2017-02-24 17:45:04
+END OF INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 17:45:04

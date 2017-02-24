@@ -43,7 +43,7 @@ def main(NAOip=[], NAOport=[], name=[]):
     questionsMed = random.sample(range(1,qMax[1]),qMax[1]-1)
     questionsLow = random.sample(range(1,qMax[2]),qMax[2]-1)
     # number of interactions in a sequence:
-    sequenceLength = 25
+    sequenceLength = 20
     # number of tasks:
     nTasks = 3
     tasks = ('H','M','L')
@@ -102,6 +102,44 @@ def main(NAOip=[], NAOport=[], name=[]):
         elif taskSequence[i] == 3:
             qS2[i] = questionsLow[j[2]]
             j[2] = j[2]+1
+
+    #DEBUG MOTIONS:
+    if False:
+        testingStr = 'This is a test'
+        for x in emotions:
+            if x == 'happy':
+                formattedSentence = naoMotions.naoSayEmotion(testingStr,x, True)
+                naoMotions.sayAndPlay(x,formattedSentence,1)
+                naoMotions.sayAndPlay(x,formattedSentence,2)
+            elif x== 'hope':
+                formattedSentence = naoMotions.naoSayEmotion(testingStr,x, True)
+                naoMotions.sayAndPlay(x,formattedSentence,1)
+            elif x=='sad':
+                formattedSentence = naoMotions.naoSayEmotion(testingStr,x, True)
+                naoMotions.sayAndPlay(x,formattedSentence,1)
+                naoMotions.sayAndPlay(x,formattedSentence,2)
+            elif x=='fear':
+                formattedSentence = naoMotions.naoSayEmotion(testingStr,x, True)
+                naoMotions.sayAndPlay(x,formattedSentence,1)
+                naoMotions.sayAndPlay(x,formattedSentence,2)
+            elif x=='anger':
+                formattedSentence = naoMotions.naoSayEmotion(testingStr,x, True)
+                naoMotions.sayAndPlay(x,formattedSentence,1)
+                naoMotions.sayAndPlay(x,formattedSentence,2)
+        raw_input("DEBUG MOTIONS")
+
+    #DEBUG TEXT
+    if False:
+        for x in trainingQuestions.questionList:
+            sentence = x[2]
+            naoMotions.naoSayEmotion(sentence,'happy')
+            #naoMotions.naoSayEmotion(sentence,'hope')
+            naoMotions.naoSayEmotion(sentence,'sad')
+            #naoMotions.naoSayEmotion(sentence,'fear')
+            naoMotions.naoSayEmotion(sentence,'anger')
+            raw_input("DEBUG MOTIONS")
+
+    #
     # Do the same above task but inline - need lambda!
     #print [qS3[i] = questionsHigh[j[0]] for i in range(sequenceLength) if taskSequence[i]==1]
     #raw_input('')
@@ -157,18 +195,18 @@ def interactionInstance(naoMotions,genUtil,logFilePath, emotion, taskNum,questio
         writer.writerow([interactionNumber,'PRE',taskNum,questionNum,qStr,emotion, st])
 
     print 'Robot will ask: ', qStr[0], '\nWith Emotion: ', emotion
-    
+    #print 'Question: ' interactionNumber
     loopback = True
     while loopback:
         formattedSentence = naoMotions.naoSayEmotion(qStr[0],emotion, True)
         naoMotions.sayAndPlay(emotion,formattedSentence)
-        #naoMotions.naoStand()
+        
         #naoMotions.setEyeEmotion('hope')
         # POST RECORDING:
         ret = Parser.getChar("To record timestamp for POST use (t,f) for (true/false), q to repeat:", ('t','f','q'))
         if ret != 'q':
             loopback = False
-
+    #naoMotions.naoStand()      
     # date-time stamp:
     ts = time.time()
     st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
@@ -187,7 +225,7 @@ def testNaoConnection(NAOip, NAOport):
 
         naoMotions = BasicMotions(NAOip, NAOport)
         print "Made Basic Motions"
-        naoMotions.naoSay("Connected!")
+        # naoMotions.naoSay("Connected!")
         # naoMotions.naoSit()
         # naoMotions.naoShadeHeadSay("Hello, the connection worked!")
 

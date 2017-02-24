@@ -46,6 +46,31 @@ def main():
 
 
     ###-----------End VARIABLE SETUP
+    if True:
+        for x in trainingQuestions.questionList:
+            print x[2]
+        raw_input("STOP HERE")
+        for x in emotions:
+            if x == 'happy':
+                formattedSentence = naoMotions.naoSayEmotion(testingStr,x, True)
+                naoMotions.sayAndPlay(x,formattedSentence,1)
+                naoMotions.sayAndPlay(x,formattedSentence,2)
+            elif x== 'hope':
+                formattedSentence = naoMotions.naoSayEmotion(testingStr,x, True)
+                naoMotions.sayAndPlay(x,formattedSentence,1)
+            elif x=='sad':
+                formattedSentence = naoMotions.naoSayEmotion(testingStr,x, True)
+                naoMotions.sayAndPlay(x,formattedSentence,1)
+                naoMotions.sayAndPlay(x,formattedSentence,2)
+            elif x=='fear':
+                formattedSentence = naoMotions.naoSayEmotion(testingStr,x, True)
+                naoMotions.sayAndPlay(x,formattedSentence,1)
+                naoMotions.sayAndPlay(x,formattedSentence,2)
+            elif x=='anger':
+                formattedSentence = naoMotions.naoSayEmotion(testingStr,x, True)
+                naoMotions.sayAndPlay(x,formattedSentence,1)
+                naoMotions.sayAndPlay(x,formattedSentence,2)
+        raw_input("DEBUG MOTIONS")
 
 
     # Randomly Generated task sequence (must regen until there is good distribution of each task):
