@@ -5,6 +5,8 @@ import math
 import time
 import random
 import NAOReactionChecker
+import numpy as np
+import random
 
 class BasicMotions:
     def __init__(self, ip = 'luke.local', port = 9559):
@@ -38,7 +40,7 @@ class BasicMotions:
         tts.setParameter("doubleVoiceLevel", 0)
         try:
             audioProxy = self.connectToProxy("ALAudioDevice")
-            audioProxy.setOutputVolume(0.9*100) #use 90%
+            audioProxy.setOutputVolume(0.8*100) #use 90%
         except Exception as e:
             print "No Audio device found"
             print e
@@ -187,7 +189,8 @@ class BasicMotions:
         self.StiffnessOn(self.motionProxy)
         standResult = postureProxy.goToPosture("Stand", speed)
         if (standResult):
-            print("------> Stood Up")
+            #print("------> Stood Up")
+            pass
         else:
             print("------> Did NOT Stand Up...")
         # self.StiffnessOff(motionProxy)
@@ -459,54 +462,16 @@ class BasicMotions:
 
 
 ### ================================================================================== davids stuff
-    def naoSayHappy(self,sayText):
-        emotion = 'happy'
+    def naoSayEmotion(self,sayText,emotion, ret=False):
         sentence= "\\vct=" + str(self.ttsPitch[emotion]) + "\\"
         sentence += self.ttsVolume[emotion] +  self.ttsSpeed[emotion]
         sentence+=sayText
         # self.tts.say(sentence)
-        self.naoSayWait(sentence, 0.5)
+        if not ret:
+            self.naoSayWait(sentence, 0.5)
+        else:
+            return sentence
 
-    def naoSaySad(self,sayText):
-        emotion = 'sad'
-        sentence= "\\vct=" + str(self.ttsPitch[emotion]) + "\\"
-        sentence += self.ttsVolume[emotion] +  self.ttsSpeed[emotion]
-        sentence+=sayText
-        # self.tts.say(sentence)
-        self.naoSayWait(sentence, 0.5)
-
-    def naoSayScared(self,sayText):
-        emotion = 'scared'
-        sentence= "\\vct=" + str(self.ttsPitch[emotion]) + "\\"
-        sentence += self.ttsVolume[emotion] +  self.ttsSpeed[emotion]
-        sentence+= str(sayText).replace(" ", "! ")
-        # self.tts.say(sentence)
-        self.naoSayWait(sentence, 0.5)
-
-    def naoSayFear(self,sayText):
-        emotion = 'fear'
-        sentence= "\\vct=" + str(self.ttsPitch[emotion]) + "\\"
-        sentence += self.ttsVolume[emotion] +  self.ttsSpeed[emotion]
-        # newText = self.contourSpeechSlope(sayText, self.ttsPitch[emotion], 20)
-        sentence+= str(sayText).replace(" ", ". ")
-        # self.tts.say(sentence)
-        self.naoSayWait(sentence, 0.5)
-
-    def naoSayHope(self,sayText):
-        emotion = 'hope'
-        sentence= "\\vct=" + str(self.ttsPitch[emotion]) + "\\"
-        sentence += self.ttsVolume[emotion] +  self.ttsSpeed[emotion]
-        sentence+=sayText
-        # self.tts.say(sentence)
-        self.naoSayWait(sentence, 0.5)
-
-    def naoSayAnger(self,sayText):
-        emotion = 'anger'
-        sentence= "\\vct=" + str(self.ttsPitch[emotion]) + "\\"
-        sentence += self.ttsVolume[emotion] +  self.ttsSpeed[emotion]
-        sentence+=sayText
-        # self.tts.say(sentence)
-        self.naoSayWait(sentence, 0.5)
 
     def contourSpeechSlope(self, sayText, mainPitch, slopeGain):
         print sayText
@@ -650,6 +615,37 @@ class BasicMotions:
         else:
             return None
 
+    def sayAndPlay(self, emotion, sentence):
+        choice = random.sample(range(1,3),1)
+        if emotion=='happy':
+            # randomly choose b/t happy emotions
+            if choice==1:
+                self.happyEmotion(sentence)
+            else:
+                self.happy3Emotion(sentence)
+        elif emotion=='hope':
+            self.hopeEmotion(sentence)
+        elif emotion=='sad':
+            # randomly choose b/t sad emotions
+            if choice==1:
+                self.sadEmotion(sentence)
+            else:
+                self.sad2Emotion(sentence)
+        elif emotion=='fear':
+            # randomly choose b/t fear emotions
+            if choice==1:
+                self.fearEmotion(sentence)
+            else:
+                self.fear2Emotion(sentence)
+        elif emotion=='anger':
+            # randomly choose b/t fear emotions
+            if choice==1:
+                self.angerEmotion(sentence)
+            else:
+                self.anger2Emotion(sentence)
+        else:
+            print "ERROR READING EMOTION!"
+
     def updateWithBlink(self, names, keys, times, color, configuration, bStand=None, bDisableEye=None,bDisableInit=None):
         times = self.shortenFirstFrameBy(times,0.8)
         self.preMotion()
@@ -680,7 +676,40 @@ class BasicMotions:
             print("------> Did NOT Stand Up...")
         self.postMotion()
 
-    def happy1Emotion(self): # praise the sun --------- Not Used
+
+    def updateWithBlinkSpeech(self, names, keys, times, color, configuration,speechSentence=[], bStand=None, bDisableEye=None,bDisableInit=None):
+        times = self.shortenFirstFrameBy(times,0.8)
+        self.preMotion()
+        postureProxy = self.connectToProxy("ALRobotPosture")
+        speechProxy = self.connectToProxy("ALTextToSpeech")
+        standResult = False
+        if bDisableInit is None:
+            if bStand is None:
+                standResult = postureProxy.goToPosture("StandInit", 0.3)
+            elif bStand==True:
+                standResult = postureProxy.goToPosture("Stand", 0.3)
+        else:
+            standResult=True
+        if (standResult):
+            print("------> Stood Up")
+            try:
+                # uncomment the following line and modify the IP if you use this script outside Choregraphe.
+                # print("Time duration is ")
+                # print(max(max(times)))
+                if bDisableEye is None:
+                    self.blinkEyes(color,max(max(times))*3, configuration)
+                speechProxy.post.say(str(speechSentence))
+                self.motionProxy.angleInterpolation(names, keys, times, True)
+                # print 'Tasklist: ', self.motionProxy.getTaskList();
+
+            except BaseException, err:
+                print "***********************Did not show Emotion"
+                print err
+        else:
+            print("------> Did NOT Stand Up...")
+        self.postMotion()
+
+    def happy1Emotion(self, speechSentence=[]): # praise the sun --------- Not Used
         names = list()
         times = list()
         keys = list()
@@ -789,9 +818,12 @@ class BasicMotions:
         times.append([1, 1.64, 2.76])
         keys.append([0.032172, 0.814512, -0.30991])
 
-        self.updateWithBlink(names, keys, times, self.eyeColor['happy'], self.eyeShape['happy'])
+        if not speechSentence:
+            self.updateWithBlink(names, keys, times, self.eyeColor['happy'], self.eyeShape['happy'])
+        else:
+            self.updateWithBlinkSpeech(names, keys, times, self.eyeColor['happy'], self.eyeShape['happy'], speechSentence)
 
-    def happyEmotion(self): # fist
+    def happyEmotion(self, speechSentence=[]): # fist
         names = list()
         times = list()
         keys = list()
@@ -900,9 +932,12 @@ class BasicMotions:
         times.append([1.56, 2.12, 2.72])
         keys.append([1.63213, 1.63213, 1.63213])
 
-        self.updateWithBlink(names, keys, times, self.eyeColor['happy'], self.eyeShape['happy'])
+        if not speechSentence:
+            self.updateWithBlink(names, keys, times, self.eyeColor['happy'], self.eyeShape['happy'])
+        else:
+            self.updateWithBlinkSpeech(names, keys, times, self.eyeColor['happy'], self.eyeShape['happy'], speechSentence)
 
-    def happy3Emotion(self): # little dance
+    def happy3Emotion(self, speechSentence=[]): # little dance
         names = list()
         times = list()
         keys = list()
@@ -1011,9 +1046,12 @@ class BasicMotions:
         times.append([1.64, 1.96, 2.28, 2.6, 2.92, 3.24, 3.56, 3.88, 4.2, 4.52, 4.88, 5.24, 5.6, 5.8])
         keys.append([0.263807, 0.251533, 0.263807, 0.251533, -0.030722, -0.06447, -0.030722, -0.06447, 0.0199001, -0.036858, 0.0199001, -0.036858, 0.0199001, -0.0552659])
 
-        self.updateWithBlink(names, keys, times, self.eyeColor['happy'], self.eyeShape['happy'])
+        if not speechSentence:
+            self.updateWithBlink(names, keys, times, self.eyeColor['happy'], self.eyeShape['happy'])
+        else:
+            self.updateWithBlinkSpeech(names, keys, times, self.eyeColor['happy'], self.eyeShape['happy'], speechSentence)
 
-    def sadEmotion(self): # arms in front head down
+    def sadEmotion(self, speechSentence=[]): # arms in front head down
         names = list()
         times = list()
         keys = list()
@@ -1122,9 +1160,13 @@ class BasicMotions:
         times.append([1.36])
         keys.append([-0.12583])
 
-        self.updateWithBlink(names, keys, times, self.eyeColor['sad'], self.eyeShape['sad'])
+        
+        if not speechSentence:
+            self.updateWithBlink(names, keys, times, self.eyeColor['sad'], self.eyeShape['sad'])
+        else:
+            self.updateWithBlinkSpeech(names, keys, times, self.eyeColor['sad'], self.eyeShape['sad'], speechSentence)
 
-    def sad2Emotion(self): # and to face, crying
+    def sad2Emotion(self, speechSentence=[]): # and to face, crying
         names = list()
         times = list()
         keys = list()
@@ -1185,9 +1227,13 @@ class BasicMotions:
         times.append([2])
         keys.append([-0.460242])
 
-        self.updateWithBlink(names, keys, times, self.eyeColor['sad'], self.eyeShape['sad'],True)
+        
+        if not speechSentence:
+            self.updateWithBlink(names, keys, times, self.eyeColor['sad'], self.eyeShape['sad'],True)
+        else:
+            self.updateWithBlinkSpeech(names, keys, times, self.eyeColor['sad'], self.eyeShape['sad'], speechSentence,True)
 
-    def scaredEmotion1(self):
+    def scaredEmotion1(self, speechSentence=[]):
         names = list()
         times = list()
         keys = list()
@@ -1300,7 +1346,7 @@ class BasicMotions:
         self.updateWithBlink(names, keys, times, self.eyeColor['scared1'], self.eyeShape['scared1'],bDisableEye=True)
         self.setEyeEmotion('scared1')
 
-    def scaredEmotion2(self): #
+    def scaredEmotion2(self, speechSentence=[]): #
         names = list()
         times = list()
         keys = list()
@@ -1413,13 +1459,13 @@ class BasicMotions:
         self.updateWithBlink(names, keys, times, self.eyeColor['scared2'], self.eyeShape['scared2'],bDisableEye=True)
         self.setEyeEmotion('scared2')
 
-    def scaredEmotion3(self):
+    def scaredEmotion3(self, speechSentence=[]):
         self.blinkAlarmingEyes(4*3, 'scared1')
         postureProxy = self.connectToProxy("ALRobotPosture")
         postureProxy.goToPosture("StandInit", 0.5)
         self.setEyeEmotion('scared1')
 
-    def fearEmotion(self): # crouch down
+    def fearEmotion(self, speechSentence=[]): # crouch down
         names = list()
         times = list()
         keys = list()
@@ -1528,9 +1574,12 @@ class BasicMotions:
         times.append([2.48])
         keys.append([0.676452])
 
-        self.updateWithBlink(names, keys, times, self.eyeColor['fear'], self.eyeShape['fear'],True)
+        if not speechSentence:
+            self.updateWithBlink(names, keys, times, self.eyeColor['fear'], self.eyeShape['fear'],True)
+        else:
+            self.updateWithBlinkSpeech(names, keys, times, self.eyeColor['fear'], self.eyeShape['fear'], speechSentence,True)
 
-    def fear2Emotion(self): # hand to face
+    def fear2Emotion(self, speechSentence=[]): # hand to face
         names = list()
         times = list()
         keys = list()
@@ -1591,9 +1640,12 @@ class BasicMotions:
         times.append([1.8])
         keys.append([-1.26559])
 
-        self.updateWithBlink(names, keys, times, self.eyeColor['fear'], self.eyeShape['fear'],True)
+        if not speechSentence:
+            self.updateWithBlink(names, keys, times, self.eyeColor['fear'], self.eyeShape['fear'],True)
+        else:
+            self.updateWithBlinkSpeech(names, keys, times, self.eyeColor['fear'], self.eyeShape['fear'], speechSentence,True)
 
-    def hopeEmotion(self): # hands to chest and head back
+    def hopeEmotion(self, speechSentence=[]): # hands to chest and head back
         names = list()
         times = list()
         keys = list()
@@ -1702,9 +1754,12 @@ class BasicMotions:
         times.append([2.24, 2.64, 3.04, 3.44, 3.84, 4.24, 4.64])
         keys.append([0.061318, 0.0858622, 0.061318, 0.0858622, 0.061318, 0.0858622, 0.061318])
 
-        self.updateWithBlink(names, keys, times, self.eyeColor['hope'], self.eyeShape['hope'], True)
+        if not speechSentence:
+            self.updateWithBlink(names, keys, times, self.eyeColor['hope'], self.eyeShape['hope'], True)
+        else:
+            self.updateWithBlinkSpeech(names, keys, times, self.eyeColor['hope'], self.eyeShape['hope'], speechSentence,True)
 
-    def hope2Emotion(self): # head back ------------- Not Used
+    def hope2Emotion(self, speechSentence=[]): # head back ------------- Not Used
         names = list()
         times = list()
         keys = list()
@@ -1815,7 +1870,7 @@ class BasicMotions:
 
         self.updateWithBlink(names, keys, times, self.eyeColor['hope'], self.eyeShape['hope'], True)
 
-    def hope3Emotion(self): # mr burns ----------- Not Used
+    def hope3Emotion(self, speechSentence=[]): # mr burns ----------- Not Used
         names = list()
         times = list()
         keys = list()
@@ -1928,7 +1983,7 @@ class BasicMotions:
 
         self.updateWithBlink(names, keys, times, self.eyeColor['hope'], self.eyeShape['hope'],True, bDisableInit=True)
 
-    def hope4Emotion(self): # mr burns fingers --------- Not Used
+    def hope4Emotion(self, speechSentence=[]): # mr burns fingers --------- Not Used
         names = list()
         times = list()
         keys = list()
@@ -2041,7 +2096,7 @@ class BasicMotions:
 
         self.updateWithBlink(names, keys, times, self.eyeColor['hope'], self.eyeShape['hope'],True, bDisableInit=True)
 
-    def angerEmotion(self):
+    def angerEmotion(self, speechSentence=[]):
         names = list()
         times = list()
         keys = list()
@@ -2150,10 +2205,14 @@ class BasicMotions:
         times.append([2.12, 2.36, 2.56, 2.76, 2.96])
         keys.append([-4.19617e-05, 0.0106959, 0.0106959, 0.0106959, 0.0106959])
 
-        self.updateWithBlink(names, keys, times, self.eyeColor['anger'], self.eyeShape['anger'])
+        
         #self.updateWithBlink(names, keys, times, 0x00FF0000, "EyeTopBottom")
+        if not speechSentence:
+            self.updateWithBlink(names, keys, times, self.eyeColor['anger'], self.eyeShape['anger'])
+        else:
+            self.updateWithBlinkSpeech(names, keys, times, self.eyeColor['anger'], self.eyeShape['anger'], speechSentence)
 
-    def anger2Emotion(self):
+    def anger2Emotion(self, speechSentence=[]):
         names = list()
         times = list()
         keys = list()
@@ -2214,9 +2273,12 @@ class BasicMotions:
         times.append([2, 2.36, 2.68, 3, 3.32, 4.04, 4.44, 4.84, 5.2])
         keys.append([1.08143, 0.87127, 0.911154, 1.19494, 1.18267, 1.35448, 1.31613, 1.31613, 1.31613])
 
-        self.updateWithBlink(names, keys, times, self.eyeColor['anger'], self.eyeShape['anger'])
+        if not speechSentence:
+            self.updateWithBlink(names, keys, times, self.eyeColor['anger'], self.eyeShape['anger'])
+        else:
+            self.updateWithBlinkSpeech(names, keys, times, self.eyeColor['anger'], self.eyeShape['anger'], speechSentence)
 
-    def LookAtEdgeMotion(self):
+    def LookAtEdgeMotion(self, speechSentence=[]):
         names = list()
         times = list()
         keys = list()
@@ -2327,7 +2389,7 @@ class BasicMotions:
 
         self.updateWithBlink(names, keys, times, self.eyeColor['hope'], self.eyeShape['hope'],True, True)
 
-    def scaredEmotion3Edge(self):
+    def scaredEmotion3Edge(self, speechSentence=[]):
         names = list()
         times = list()
         keys = list()

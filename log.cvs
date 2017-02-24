@@ -1,12 +1,63 @@
-PRE H1 |2017-02-23 16:46:09|
-PRE H1 |2017-02-23 16:46:19|
-PRE H1 |2017-02-23 16:46:22|
-PRE,H1,2017-02-23 16:48:49
-PRE,H1,2017-02-23 16:51:18
-POST,H1,2017-02-23 16:51:20
-PRE,H1,2017-02-23 16:52:18
-POST,H1,t,2017-02-23 16:52:18
-PRE,H1,2017-02-23 16:52:22
-POST,H1,f,2017-02-23 16:52:23
-PRE,1,12,['Are you planning to cook a meal today? Is there something you like or dislike about cooking?'],1,2017-02-23 22:37:58
-POST,1,12,['Are you planning to cook a meal today? Is there something you like or dislike about cooking?'],1,t,2017-02-23 22:38:02
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 10:42:29
+NEW INTERACTION SEQUENCE,"[3, 2, 1, 2, 3, 3, 3, 1, 2, 1]","[2, 10, 14, 1, 14, 6, 5, 11, 4, 12]","['sad', 'hope', 'happy', 'fear', 'sad', 'fear', 'hope', 'angry', 'angry', 'happy']",2017-02-24 10:42:29
+PRE,3,2,['What bad habits do you want to break?'],sad,2017-02-24 10:42:31
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 10:43:42
+NEW INTERACTION SEQUENCE,"[1, 2, 1, 3, 3, 1, 2, 3, 2, 1]","[6, 13, 11, 12, 3, 4, 3, 4, 6, 2]","['angry', 'hope', 'happy', 'fear', 'sad', 'fear', 'sad', 'hope', 'angry', 'happy']",2017-02-24 10:43:42
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 10:44:13
+NEW INTERACTION SEQUENCE,"[3, 3, 2, 2, 2, 1, 2, 1, 3, 1]","[13, 14, 6, 13, 12, 2, 9, 4, 11, 12]","['fear', 'angry', 'sad', 'angry', 'happy', 'happy', 'hope', 'sad', 'fear', 'hope']",2017-02-24 10:44:13
+PRE,3,13,"['What is your favourite past-time activity? Do you do it often? If you answer no, why not?']",fear,2017-02-24 10:44:16
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 10:46:15
+NEW INTERACTION SEQUENCE,"[3, 3, 3, 3, 1, 2, 1, 2, 2, 1]","[5, 14, 8, 2, 13, 12, 11, 8, 4, 6]","['fear', 'sad', 'fear', 'angry', 'happy', 'hope', 'angry', 'hope', 'happy', 'sad']",2017-02-24 10:46:15
+PRE,3,5,['How would you describe yourself in 5 words?'],fear,2017-02-24 10:46:20
+POST,3,5,['How would you describe yourself in 5 words?'],fear,t,2017-02-24 10:46:35
+PRE,3,14,"['My name is Luke, What is your name? Do you like your name?']",sad,2017-02-24 10:46:36
+POST,3,14,"['My name is Luke, What is your name? Do you like your name?']",sad,f,2017-02-24 10:46:47
+PRE,3,8,['My favourite subject is human psychology so I can understand people. What was your favourite subject in school?'],fear,2017-02-24 10:46:49
+POST,3,8,['My favourite subject is human psychology so I can understand people. What was your favourite subject in school?'],fear,f,2017-02-24 10:47:06
+PRE,3,2,['What bad habits do you want to break?'],angry,2017-02-24 10:47:08
+POST,3,2,['What bad habits do you want to break?'],angry,f,2017-02-24 10:47:22
+PRE,1,13,['Are you planning to buy groceries in the next few days? What do you think you will buy?'],happy,2017-02-24 10:47:23
+POST,1,13,['Are you planning to buy groceries in the next few days? What do you think you will buy?'],happy,t,2017-02-24 10:47:36
+PRE,2,12,['Have you participated in any social events in the past week? What was it? Did you enjoy the event?'],hope,2017-02-24 10:47:37
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 10:49:31
+NEW INTERACTION SEQUENCE,"[3, 3, 1, 2, 2, 1, 3, 1, 2, 2]","[11, 10, 6, 13, 12, 13, 1, 9, 11, 6]","['fear', 'sad', 'happy', 'hope', 'happy', 'sad', 'angry', 'fear', 'angry', 'hope']",2017-02-24 10:49:31
+0,PRE,3,11,['Do you live in the city? Where you prefer to live? City or county?'],fear,2017-02-24 10:49:34
+0,POST,3,11,['Do you live in the city? Where you prefer to live? City or county?'],fear,t,2017-02-24 10:49:49
+1,PRE,3,10,['I was born in France. Where were you born?'],sad,2017-02-24 10:49:52
+1,POST,3,10,['I was born in France. Where were you born?'],sad,t,2017-02-24 10:50:04
+2,PRE,1,6,['What healthy food you like? Have you cooked and eaten a healthy meal in the last 24 hours?'],happy,2017-02-24 10:50:07
+2,POST,1,6,['What healthy food you like? Have you cooked and eaten a healthy meal in the last 24 hours?'],happy,f,2017-02-24 10:50:23
+3,PRE,2,13,['Have you met any new people recently? Do you enjoy meeting new people?'],hope,2017-02-24 10:50:25
+3,POST,2,13,['Have you met any new people recently? Do you enjoy meeting new people?'],hope,f,2017-02-24 10:50:40
+4,PRE,2,12,['Have you participated in any social events in the past week? What was it? Did you enjoy the event?'],happy,2017-02-24 10:50:40
+4,POST,2,12,['Have you participated in any social events in the past week? What was it? Did you enjoy the event?'],happy,t,2017-02-24 10:50:56
+5,PRE,1,13,['Are you planning to buy groceries in the next few days? What do you think you will buy?'],sad,2017-02-24 10:50:57
+5,POST,1,13,['Are you planning to buy groceries in the next few days? What do you think you will buy?'],sad,f,2017-02-24 10:51:08
+6,PRE,3,1,['My sister is Leia. We used to live together but now I live in a new building. Do you live with your parents or siblings?'],angry,2017-02-24 10:51:10
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 10:53:03
+NEW INTERACTION SEQUENCE,"[3, 1, 2, 1, 2, 3, 2, 1, 1, 3]","[12, 1, 8, 9, 1, 11, 3, 10, 11, 3]","['hope', 'fear', 'fear', 'angry', 'happy', 'angry', 'sad', 'happy', 'sad', 'hope']",2017-02-24 10:53:03
+0,PRE,3,12,['When was the last time you tried something new? What was it?'],hope,2017-02-24 10:53:04
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 10:54:03
+NEW INTERACTION SEQUENCE,"[2, 1, 1, 3, 2, 3, 1, 1, 3, 2]","[1, 12, 6, 5, 11, 2, 9, 14, 6, 7]","['happy', 'hope', 'happy', 'sad', 'sad', 'hope', 'angry', 'fear', 'angry', 'fear']",2017-02-24 10:54:03
+0,PRE,2,1,"['If you had to teach someone one thing, what would you teach and to whom would you teach it?']",happy,2017-02-24 10:54:05
+0,POST,2,1,"['If you had to teach someone one thing, what would you teach and to whom would you teach it?']",happy,t,2017-02-24 10:54:24
+1,PRE,1,12,['Are you planning to cook a meal today? Is there something you like or dislike about cooking?'],hope,2017-02-24 10:54:25
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 10:55:25
+NEW INTERACTION SEQUENCE,"[2, 2, 1, 3, 2, 1, 1, 3, 3, 2]","[4, 1, 10, 2, 11, 13, 2, 3, 9, 2]","['angry', 'hope', 'happy', 'fear', 'happy', 'sad', 'fear', 'hope', 'angry', 'sad']",2017-02-24 10:55:25
+0,PRE,2,4,"['If you had unlimited resources, how would you live your life?']",angry,2017-02-24 10:56:04
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 10:56:48
+NEW INTERACTION SEQUENCE,"[1, 3, 1, 3, 1, 2, 2, 2, 3, 2]","[2, 10, 10, 11, 6, 11, 13, 3, 8, 10]","['happy', 'anger', 'hope', 'anger', 'sad', 'fear', 'fear', 'happy', 'sad', 'hope']",2017-02-24 10:56:48
+0,PRE,1,2,"[""I don't have any teeth. How often do you floss your teeth?""]",happy,2017-02-24 10:56:50
+0,POST,1,2,"[""I don't have any teeth. How often do you floss your teeth?""]",happy,t,2017-02-24 10:57:01
+1,PRE,3,10,['I was born in France. Where were you born?'],anger,2017-02-24 10:57:03
+1,POST,3,10,['I was born in France. Where were you born?'],anger,f,2017-02-24 10:57:16
+2,PRE,1,10,['How often do you usually go grocery shopping?'],hope,2017-02-24 10:57:21
+2,POST,1,10,['How often do you usually go grocery shopping?'],hope,t,2017-02-24 10:57:36
+3,PRE,3,11,['Do you live in the city? Where you prefer to live? City or county?'],anger,2017-02-24 10:57:38
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-24 10:59:22
+NEW INTERACTION SEQUENCE,"[2, 1, 1, 2, 1, 2, 3, 3, 1, 3]","[7, 1, 4, 12, 8, 10, 7, 8, 6, 12]","['sad', 'fear', 'happy', 'hope', 'fear', 'anger', 'happy', 'anger', 'hope', 'sad']",2017-02-24 10:59:22
+0,PRE,2,7,['Where would you like to live? Why haven\xe2\x80\x99t you moved there?'],sad,2017-02-24 10:59:23
+0,POST,2,7,['Where would you like to live? Why haven\xe2\x80\x99t you moved there?'],sad,t,2017-02-24 10:59:38
+1,PRE,1,1,['Have you eaten today? What did you have for breakfast?'],fear,2017-02-24 10:59:41
+1,POST,1,1,['Have you eaten today? What did you have for breakfast?'],fear,f,2017-02-24 10:59:56
+2,PRE,1,4,['I know Tia-Chi and practice it often. What sport do you like? Do you play it often?'],happy,2017-02-24 11:00:00

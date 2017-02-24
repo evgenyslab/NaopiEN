@@ -36,7 +36,7 @@ def main():
     nTasks = 3
     tasks = ('H','M','L')
     logFilePath = "log.cvs"
-    emotions = ("Happy", "Hopeful", "Sad", "Fearful", "Angry")
+    emotions = ("happy", "hope", "sad", "fear", "angry")
     # Hopeful = interested
     # fearful = worried
     # Angry = stern
@@ -59,7 +59,20 @@ def main():
         #print taskQCount
         if np.std(taskQCount) > 0.6:
             genOk = False
-    print 'Sequence: ', taskSequence, '\t historgram: ', taskQCount
+    print 'Task Sequence: ', taskSequence, '\t historgram: ', taskQCount
+    #---------- Generate emotion list:
+    genOk = False
+    print 'Generating uniform distribution of emotions questions for sequence...'
+    while not genOk:
+        genOk = True
+        emotionSequence = [np.random.choice(range(0,len(emotions))) for x in range(sequenceLength)]
+        emotionCount = np.asarray([len([x for x in range(sequenceLength) if emotionSequence[x]==y]) for y in range(len(emotions))])
+        #print taskQCount
+        if (np.std(emotionCount) > 0.6) or len([y for y in range(len(emotionCount)) if emotionCount[y]==0])>0:
+            genOk = False
+    emotionSequenceText = [emotions[emotionSequence[y]] for y in range(len(emotionSequence))]
+    print 'Emotion Sequence: ', emotionSequenceText, '\t historgram: ', emotionCount
+    raw_input("BREAK")
     # print task names
     taskArray = [tasks[x-1] for x in taskSequence]
     print taskArray

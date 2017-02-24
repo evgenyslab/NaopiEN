@@ -13,8 +13,14 @@ class taskQuestions:
         lArr =  [re.split(r'[\t\n]+',lines[x]) for x in range(0,len(lines))]
         #print len(lArr)
         self.questionList = []
+        taskLast = -1
         for x in range(0,len(lArr)):
-            self.questionList.append((int(lArr[x][0]),x+1,lArr[x][1]))
+            task = int(lArr[x][0])
+            if task != taskLast:
+                count = 1
+            self.questionList.append((int(lArr[x][0]),count,lArr[x][1]))
+            taskLast = task
+            count +=1
 
         self.nlines = len(lArr)
         self.nTasks = list(np.unique([self.questionList[x][0] for x in range(0,self.nlines)]))
@@ -22,6 +28,7 @@ class taskQuestions:
         # this gets the number of questions for each task:
         self.questionsPerTask = [len([self.questionList[x][0] for x in range(0,self.nlines) if self.questionList[x][0]==y]) for y in range(1,len(self.nTasks)+1)]
 
+        #print self.questionList
         #print self.questionsPerTask
 
     def getQuestion(self,taskNum=1,questionNum=1):

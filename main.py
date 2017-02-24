@@ -18,6 +18,21 @@ import random
 import datetime
 import csv
 
+class Parser:
+    import sys
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def getChar(str="Please enter char: ", cRange = ('a','b','c')):
+        ask = True
+        while ask:
+            ret = raw_input(str)
+            if len(ret) == 1 and ret in cRange:
+                ask = False
+            else:
+                print "Input is not single char, or not in range: ", cRange
+        return ret
 
 def main(NAOip=[], NAOport=[], name=[]):
     ###---------- VARIABLE SETUP:
@@ -33,7 +48,7 @@ def main(NAOip=[], NAOport=[], name=[]):
     nTasks = 3
     tasks = ('H','M','L')
     logFilePath = "log.cvs"
-    emotions = ("Happy", "Hopeful", "Sad", "Fearful", "Angry")
+    emotions = ("happy", "hope", "sad", "fear", "anger")
     # Hopeful = interested
     # fearful = worried
     # Angry = stern
@@ -42,13 +57,7 @@ def main(NAOip=[], NAOport=[], name=[]):
     genUtil = GenUtil(naoMotions)
 
     # get now to stand and test vocals - looks like will work together.
-   
     naoMotions.naoStand()
-    naoMotions.naoSay("the quick brown fox did something.")
-    naoMotions.naoShakeHead()
-    #naoMotions.happyEmotion()
-    raw_input("BREAK")
-
     ###-----------End VARIABLE SETUP
 
 
@@ -64,9 +73,21 @@ def main(NAOip=[], NAOport=[], name=[]):
         if np.std(taskQCount) > 0.6:
             genOk = False
     print 'Sequence: ', taskSequence, '\t historgram: ', taskQCount
+    #---------- Generate emotion list:
+    genOk = False
+    print 'Generating uniform distribution of emotions questions for sequence...'
+    while not genOk:
+        genOk = True
+        emotionSequence = [np.random.choice(range(0,len(emotions))) for x in range(sequenceLength)]
+        emotionCount = np.asarray([len([x for x in range(sequenceLength) if emotionSequence[x]==y]) for y in range(len(emotions))])
+        #print taskQCount
+        if (np.std(emotionCount) > 0.6) or len([y for y in range(len(emotionCount)) if emotionCount[y]==0])>0:
+            genOk = False
+    emotionSequenceText = [emotions[emotionSequence[y]] for y in range(len(emotionSequence))]
+    print 'Emotion Sequence: ', emotionSequenceText, '\t historgram: ', emotionCount
     # print task names
     taskArray = [tasks[x-1] for x in taskSequence]
-    print taskArray
+    # print taskArray
     # now need to sample the questions based for each task with no repeats:
     qS2 = range(sequenceLength)
     qS3 = range(sequenceLength)
@@ -84,26 +105,40 @@ def main(NAOip=[], NAOport=[], name=[]):
     # Do the same above task but inline - need lambda!
     #print [qS3[i] = questionsHigh[j[0]] for i in range(sequenceLength) if taskSequence[i]==1]
     #raw_input('')
-    print qS2
+    #print qS2
     # can do something like this to combine:
-    taskQuestionSequence = [(taskArray[x]+str(qS2[x])) for x in range(0,sequenceLength)]
+    #taskQuestionSequence = [(taskArray[x]+str(qS2[x])) for x in range(0,sequenceLength)]
+    # 2xn array of task + question...maybe this should be 3xn with emotion too...
     tqs = []
     tqs.append(taskSequence)
     tqs.append(qS2)
-    print tqs # first row is the task, second row is question
-
+    # print tqs # first row is the task, second row is question
     # open log file:
     # Write Sequence of tasks:
-    # []
+    ts = time.time()
+    st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+    with open(logFilePath, 'a') as csvfile:
+        writer = csv.writer(csvfile, delimiter=',')
+        writer.writerow(['NEW INTERACTION SEQUENCE','TASK SECQUENCE','QUESTION SEQUENCE','EMOTION SEQUENCE', st])
+        writer.writerow(['NEW INTERACTION SEQUENCE',taskSequence,qS2,emotionSequenceText, st])
+
+
+
     for x in range(0,sequenceLength):
         # randomly draw robot emotion:
-        emotion = 1
-        interactionInstance(logFilePath,emotion,tqs[0][x],tqs[1][x],trainingQuestions)
+        interactionInstance(naoMotions,genUtil,logFilePath,emotionSequenceText[x],tqs[0][x],tqs[1][x],trainingQuestions,x)
 
     # open log file - write end of interaction
+    ts = time.time()
+    st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+    with open(logFilePath, 'a') as csvfile:
+        writer = csv.writer(csvfile, delimiter=',')
+        writer.writerow(['END OF INTERACTION SEQUENCE',taskSequence,qS2,emotionSequenceText, st])
+        writer.writerow(['END OF INTERACTION SEQUENCE','TASK SECQUENCE','QUESTION SEQUENCE','EMOTION SEQUENCE', st])
+        
 
 
-def interactionInstance(logFilePath, emotion, taskNum,questionNum,questionObj):
+def interactionInstance(naoMotions,genUtil,logFilePath, emotion, taskNum,questionNum,questionObj, interactionNumber):
     # get question string:
     qStr = questionObj.getQuestion(taskNum,questionNum)
     # Get operator to press record to log the time for the users initial affect:
@@ -114,15 +149,14 @@ def interactionInstance(logFilePath, emotion, taskNum,questionNum,questionObj):
     # write log file for initial recording of affect:
     with open(logFilePath, 'a') as csvfile:
         writer = csv.writer(csvfile, delimiter=',')
-        writer.writerow(['PRE',taskNum,questionNum,qStr,emotion, st])
+        writer.writerow([interactionNumber,'PRE',taskNum,questionNum,qStr,emotion, st])
 
-    print 'Robot will ask: ', qStr
-    # get speech string:
-    speechSentence = []
-    # Robot plays Question and emotion:
-    ROBOT_PLAY_QUESTIONEMOTION = 0
-
-	#self.genUtil.naoEmotionalSay(sayText, self.getOENumber())
+    print 'Robot will ask: ', qStr[0], '\nWith Emotion: ', emotion
+    
+    formattedSentence = naoMotions.naoSayEmotion(qStr[0],emotion, True)
+    naoMotions.sayAndPlay(emotion,formattedSentence)
+    naoMotions.naoStand()
+    naoMotions.setEyeEmotion('hope')
 
     # POST RECORDING:
     ret = Parser.getChar("press 'T' to record timestamp for POST affect with success, or 'F' for false:", ('t','f'))
@@ -132,7 +166,7 @@ def interactionInstance(logFilePath, emotion, taskNum,questionNum,questionObj):
     # write log file for initial recording of affect:
     with open(logFilePath, 'a') as csvfile:
         writer = csv.writer(csvfile, delimiter=',')
-        writer.writerow(['POST',taskNum,questionNum,qStr,emotion,ret,st])
+        writer.writerow([interactionNumber,'POST',taskNum,questionNum,qStr,emotion,ret,st])
 
 def testNaoConnection(NAOip, NAOport):
     worked = False
