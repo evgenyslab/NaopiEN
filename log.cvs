@@ -1,0 +1,12 @@
+PRE H1 |2017-02-23 16:46:09|
+PRE H1 |2017-02-23 16:46:19|
+PRE H1 |2017-02-23 16:46:22|
+PRE,H1,2017-02-23 16:48:49
+PRE,H1,2017-02-23 16:51:18
+POST,H1,2017-02-23 16:51:20
+PRE,H1,2017-02-23 16:52:18
+POST,H1,t,2017-02-23 16:52:18
+PRE,H1,2017-02-23 16:52:22
+POST,H1,f,2017-02-23 16:52:23
+PRE,1,12,['Are you planning to cook a meal today? Is there something you like or dislike about cooking?'],1,2017-02-23 22:37:58
+POST,1,12,['Are you planning to cook a meal today? Is there something you like or dislike about cooking?'],1,t,2017-02-23 22:38:02

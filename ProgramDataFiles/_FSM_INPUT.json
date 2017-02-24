@@ -1,0 +1,9 @@
+{
+"_comment": "Fill in the data here to be read in by the program"
+
+,"naoIP":            "luke.local"
+,"userName":         "Test User"
+,"userNumber":       100
+,"interactionType":  "End of Day"
+,"lastInteraction":  false
+}

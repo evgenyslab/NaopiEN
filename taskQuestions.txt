@@ -1,0 +1,44 @@
+1	Have you eaten today? What did you have for breakfast?
+1	I don't have any teeth. How often do you floss your teeth?
+1	How many steps have you done today? Do you think it is over 5000?
+1	I know Tia-Chi and practice it often. What sport do you like? Do you play it often?
+1	Do you enjoy exercise? Have you climbed 5 flights of stairs today?
+1	What healthy food you like? Have you cooked and eaten a healthy meal in the last 24 hours?
+1	I heard fried food is delicious. But so bad for you. Do you like fried food? What is your favourite? Have you eaten fried food in the last 24 hours?
+1	Have you paid your rent for the last month? Do you find it expensive?
+1	Have you paid your utilities for the last month? Do you find it expensive?
+1	How offten do you usually go grocery shopping?
+1	Are you planning to go out for a meal today? Where would you go if you did?
+1	Are you planning to cook a meal today? Is there something you like or dislike about cooking?
+1	Are you planning to buy groceries in the next few days? What do you think you will buy?
+1	Are you planning to have lunch today? And if so, what do you plan to eat?
+1	Are you planning to have dinner today? And if so, what do you plan to eat?
+2	If you had to teach someone one thing, what would you teach and to whom would you teach it?
+2	How do you react when you encounter a homeless person?
+2	If you could spend 15 minutes with anyone, living or dead, who would it be? Why?
+2	If you had unlimited resources, how would you live your life?
+2	What do you want your life to look like in 5 years? Do you have a plan to get there?
+2	If today was the last day of your life, what would you want to do?
+2	Where would you like to live? Why haven’t you moved?
+2	When is the last time you saw your best friend? Are you planning to go out with your best friend this week?
+2	Have you been to the movies recently? What did you see? Was it good?
+2	Have you ever been to the theatre to see the ballet, an opera or musicals? What was your favourite? If you haven't gone, would you like to go?
+2	Have you played any interesting video games recently? If so, what were they? I like anything with dancing.
+2	Have you participated in any social events in the past week? What was it? Did you enjoy the event?
+2	Have you met any new people recently? Do you enjoy meeting new people?
+2	Have you read any interesting books lately? What is your favourite book of all time?
+3	My sister is Leia. We used to live together but now I live in a new building. Do you live with your parents or siblings?
+3	What bad habits do you want to break?
+3	What drives you to do better at something?
+3	If your entire life was a movie, what title would best fit?
+3	How would you describe yourself in 5 words?
+3	My favourit band is daft punk, Who is your favourite band and how long have you been listening to them?
+3	What is your favourite song? Why do you like it?
+3	My favourite subject is human psychology so I can understand people. What was your favourite subject in school?
+3	What is your current occupation? Mine is just being a robot.
+3	I was born in France. Where were you born?
+3	Do you live in the city? Where you prefer to live? City or county?
+3	Where would be your favourite place to live and why?
+3	What is your favourite past-time activity?
+3	My name is Luke, What is your name? Do you like your name?
+3	I am almost two years old. How old are you? When is your birthday? 
