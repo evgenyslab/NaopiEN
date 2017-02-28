@@ -103,7 +103,7 @@ def main(NAOip=[], NAOport=[], name=[]):
             qS2[i] = questionsLow[j[2]]
             j[2] = j[2]+1
 
-    #DEBUG MOTIONS:
+    #DEBUG MOTIONS & Speech:
     if False:
         testingStr = 'This is a test'
         for x in emotions:
@@ -126,6 +126,25 @@ def main(NAOip=[], NAOport=[], name=[]):
                 formattedSentence = naoMotions.naoSayEmotion(testingStr,x, True)
                 naoMotions.sayAndPlay(x,formattedSentence,1)
                 naoMotions.sayAndPlay(x,formattedSentence,2)
+        raw_input("DEBUG MOTIONS")
+
+    #DEBUG MOTION ONLY
+    if False:
+        for x in emotions:
+            if x == 'happy':
+                naoMotions.sayAndPlay(x,[],1)
+                naoMotions.sayAndPlay(x,[],2)
+            elif x== 'hope':
+                naoMotions.sayAndPlay(x,[]],1)
+            elif x=='sad':
+                naoMotions.sayAndPlay(x,[],1)
+                naoMotions.sayAndPlay(x,[],2)
+            elif x=='fear':
+                naoMotions.sayAndPlay(x,[],1)
+                naoMotions.sayAndPlay(x,[],2)
+            elif x=='anger':
+                naoMotions.sayAndPlay(x,[],1)
+                naoMotions.sayAndPlay(x,[],2)
         raw_input("DEBUG MOTIONS")
 
     #DEBUG TEXT
@@ -173,7 +192,7 @@ def main(NAOip=[], NAOport=[], name=[]):
         writer = csv.writer(csvfile, delimiter=',')
         writer.writerow(['END OF INTERACTION SEQUENCE',taskSequence,qS2,emotionSequenceText, st])
         writer.writerow(['END OF INTERACTION SEQUENCE','TASK SECQUENCE','QUESTION SEQUENCE','EMOTION SEQUENCE', st])
-    
+
     # ENDING THANKYOUS
     naoMotions.naoStand()
     formattedSentence = naoMotions.naoSayEmotion('Thank you for participating','happy', True)
@@ -200,13 +219,13 @@ def interactionInstance(naoMotions,genUtil,logFilePath, emotion, taskNum,questio
     while loopback:
         formattedSentence = naoMotions.naoSayEmotion(qStr[0],emotion, True)
         naoMotions.sayAndPlay(emotion,formattedSentence)
-        
+
         #naoMotions.setEyeEmotion('hope')
         # POST RECORDING:
         ret = Parser.getChar("To record timestamp for POST use (t,f) for (true/false), q to repeat:", ('t','f','q'))
         if ret != 'q':
             loopback = False
-    #naoMotions.naoStand()      
+    #naoMotions.naoStand()
     # date-time stamp:
     ts = time.time()
     st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
