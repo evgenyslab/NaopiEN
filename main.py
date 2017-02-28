@@ -130,22 +130,23 @@ def main(NAOip=[], NAOport=[], name=[]):
 
     #DEBUG MOTION ONLY
     if False:
-        for x in emotions:
-            if x == 'happy':
-                naoMotions.sayAndPlay(x,[],1)
-                naoMotions.sayAndPlay(x,[],2)
-            elif x== 'hope':
-                naoMotions.sayAndPlay(x,[]],1)
-            elif x=='sad':
-                naoMotions.sayAndPlay(x,[],1)
-                naoMotions.sayAndPlay(x,[],2)
-            elif x=='fear':
-                naoMotions.sayAndPlay(x,[],1)
-                naoMotions.sayAndPlay(x,[],2)
-            elif x=='anger':
-                naoMotions.sayAndPlay(x,[],1)
-                naoMotions.sayAndPlay(x,[],2)
-        raw_input("DEBUG MOTIONS")
+        while 1:
+            for x in emotions:
+                if x == 'happy':
+                    naoMotions.sayAndPlay(x,[],1)
+                    naoMotions.sayAndPlay(x,[],2)
+                elif x== 'hope':
+                    naoMotions.sayAndPlay(x,[]],1)
+                elif x=='sad':
+                    naoMotions.sayAndPlay(x,[],1)
+                    naoMotions.sayAndPlay(x,[],2)
+                elif x=='fear':
+                    naoMotions.sayAndPlay(x,[],1)
+                    naoMotions.sayAndPlay(x,[],2)
+                elif x=='anger':
+                    naoMotions.sayAndPlay(x,[],1)
+                    naoMotions.sayAndPlay(x,[],2)
+            raw_input("DEBUG MOTIONS: PRESS ENTER TO REPEAT")
 
     #DEBUG TEXT
     if False:
