@@ -64,5 +64,5 @@
 2 Mike's grandpa has 7 sons, each of them has one little sister.\\pau=500\\ How many children does Mike's grandpa have.
 2 In what case does 11 plus 2 is equal to 1.
 2 How do you place 3 chopsticks to be a number larger than 3, but smaller than 4.
-2 The height limit of a bridge is 10 metres,\\pau=200\\ but the boat is more than 10 metres.\\pau=500\\ What should we do?
-2 Sam can trim 5 nails in 1 minute,\\pau=200\\ how many of his nails can he trim in 20 minutes?
+2 The height limit of a bridge is 10 metres,\\pau=200\\ but the boat is more than 10 metres.\\pau=500\\ What should we do.
+2 Sam can trim 5 nails in 1 minute,\\pau=200\\ how many of his nails can he trim in 20 minutes.
