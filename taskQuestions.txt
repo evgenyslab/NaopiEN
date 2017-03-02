@@ -40,3 +40,29 @@
 3	I am almost two years old.\\pau=500\\ How old are you?\\pau=500\\ When is your birthday?
 3	If your entire life was a movie, what would be the title.
 3	Do you live in the city.\\pau=500\\ Where do you prefer to live, City or country-side.
+2 A plane crashed on the border or US and Canada.\\pau=500\\ Where do they bury the survivors.
+2 A person dropped from the plane, but he survived,\\pau=500\\ how is that possible.
+2 Why does a frog jumps higher than a tree.
+3 What's the first thing you do when you wake up in the morning.
+2 When a car is turning left,\\pau=500\\ which tire dosen't turn.
+2 Who only works one day each year.
+2 Why do the new socks have two holes.
+2 Sam shaves forty times a day,\\pau=500\\ but why he still have moustach.
+2 Two fathers and two sons go fishing together in the same boat.\\pau=500\\ They all catch a fish,\\pau=200\\ but the total catch for the day is three fish.\\pau=500\\ How is this possible.
+2 A mile-long train is moving at sixty miles an hour when it reaches a mile-long tunnel.\\pau=500\\ How long does it take the entire train to pass through the tunnel?
+2 First, think of the color of clouds.\\pau=500\\ Next think of the color of snow.\\pau=500\\ Last, think of the color of the moon.\\pau=500\\ Now, what do cows drink.
+2 A man says his dog can jump over his house.\\pau=500\\ No one believes him, but he is right.\\pau=500\\ How is that possible.
+2 Which month has 28 days.
+2 If you were to spell out the numbers,\\pau=200\\ how far would you have to go before encountering the letter A.
+2 Five cats can catch Five mice in Five minutes.\\pau=500\\ How many cats does it take to catch 100 mice in 100 minutes.
+2 There is one animal that looks like a tiger, but the size is like a cat,\\pau=400\\ what animal is that.
+2 What is sleeping beauty most afraid of.
+2 A cow walked 10 metres towards north,\\pau=200\\ then walked 5 metres towards west,\\pau=200\\ where does its tail pointing to.
+2 Sam's mom has 3 sons,\\pau=200\\ the first son is Peter, \\pau=200\\the second son is Mike,\\pau=200\\ what's the name of her third son.
+2 Sam's apartment was on fire, but he could not push the door out to get out.\\pau500\\ How does he get out.
+2 What cream does become in the north pole.
+2 Mike's grandpa has 7 sons, each of them has one little sister.\\pau=500\\ How many children does Mike's grandpa have.
+2 In what case does 11 plus 2 is equal to 1.
+2 How do you place 3 chopsticks to be a number larger than 3, but smaller than 4.
+2 The height limit of a bridge is 10 metres,\\pau=200\\ but the boat is more than 10 metres.\\pau=500\\ What should we do?
+2 Sam can trim 5 nails in 1 minute,\\pau=200\\ how many of his nails can he trim in 20 minutes?
