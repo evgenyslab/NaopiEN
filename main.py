@@ -129,14 +129,14 @@ def main(NAOip=[], NAOport=[], name=[]):
         raw_input("DEBUG MOTIONS")
 
     #DEBUG MOTION ONLY
-    if False:
+    if True:
         while 1:
             for x in emotions:
                 if x == 'happy':
                     naoMotions.sayAndPlay(x,[],1)
                     naoMotions.sayAndPlay(x,[],2)
                 elif x== 'hope':
-                    naoMotions.sayAndPlay(x,[]],1)
+                    naoMotions.sayAndPlay(x,[],1)
                 elif x=='sad':
                     naoMotions.sayAndPlay(x,[],1)
                     naoMotions.sayAndPlay(x,[],2)
