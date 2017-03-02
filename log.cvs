@@ -422,3 +422,316 @@ NEW INTERACTION SEQUENCE,"[1, 2, 1, 3, 1, 1, 1, 2, 3, 2, 1, 2, 2, 3, 1, 3, 3, 3,
 19,POST,3,3,['What do you like to do on the weekends?'],hope,t,2017-02-28 18:43:22
 END OF INTERACTION SEQUENCE,"[1, 2, 1, 3, 1, 1, 1, 2, 3, 2, 1, 2, 2, 3, 1, 3, 3, 3, 2, 3]","[7, 10, 8, 10, 3, 9, 5, 3, 14, 12, 10, 2, 9, 1, 1, 13, 2, 9, 8, 3]","['happy', 'anger', 'sad', 'hope', 'fear', 'happy', 'sad', 'sad', 'anger', 'fear', 'hope', 'hope', 'happy', 'anger', 'happy', 'fear', 'sad', 'anger', 'fear', 'hope']",2017-02-28 18:43:22
 END OF INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-02-28 18:43:22
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-03-02 10:39:14
+NEW INTERACTION SEQUENCE,"[1, 1, 2, 2, 3, 1, 3, 3, 2, 3, 3, 1, 2, 3, 1, 2, 1, 2, 2, 3]","[4, 5, 7, 36, 8, 2, 13, 6, 21, 5, 10, 3, 32, 3, 6, 16, 1, 19, 5, 4]","['happy', 'fear', 'sad', 'sad', 'happy', 'hope', 'happy', 'fear', 'anger', 'anger', 'sad', 'anger', 'fear', 'hope', 'hope', 'happy', 'fear', 'sad', 'anger', 'hope']",2017-03-02 10:39:14
+0,PRE,1,4,['I know Tai Chee and practice it often.\\\\pau=500\\\\ What sport do you like?\\\\pau=500\\\\ Do you play it often?'],happy,2017-03-02 10:39:17
+0,POST,1,4,['I know Tai Chee and practice it often.\\\\pau=500\\\\ What sport do you like?\\\\pau=500\\\\ Do you play it often?'],happy,t,2017-03-02 10:39:30
+1,PRE,1,5,['Do you enjoy exercise?\\\\pau=500\\\\ Have you climbed 5 flights of stairs today?'],fear,2017-03-02 10:39:31
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-03-02 10:48:26
+NEW INTERACTION SEQUENCE,"[2, 2, 2, 2, 3, 3, 3, 1, 2, 3, 1, 1, 1, 1, 1, 3, 3, 2, 2, 3]","[30, 31, 2, 17, 10, 1, 11, 2, 15, 15, 10, 9, 5, 3, 11, 6, 8, 35, 33, 9]","['sad', 'anger', 'anger', 'hope', 'fear', 'anger', 'happy', 'sad', 'fear', 'hope', 'fear', 'fear', 'hope', 'hope', 'sad', 'happy', 'anger', 'happy', 'sad', 'happy']",2017-03-02 10:48:26
+0,PRE,2,30,['What is sleeping beauty most afraid of.'],sad,2017-03-02 10:51:24
+0,POST,2,30,['What is sleeping beauty most afraid of.'],sad,t,2017-03-02 10:52:49
+1,PRE,2,31,"['A cow walked 10 metres towards north,\\\\pau=200\\\\ then walked 5 metres towards west,\\\\pau=200\\\\ where does its tail pointing to.']",anger,2017-03-02 10:52:51
+1,POST,2,31,"['A cow walked 10 metres towards north,\\\\pau=200\\\\ then walked 5 metres towards west,\\\\pau=200\\\\ where does its tail pointing to.']",anger,t,2017-03-02 10:53:31
+2,PRE,2,2,['How much time are you spending on social media?\\\\pau=500\\\\ What is your favourite platform to use?'],anger,2017-03-02 10:53:35
+2,POST,2,2,['How much time are you spending on social media?\\\\pau=500\\\\ What is your favourite platform to use?'],anger,f,2017-03-02 10:54:01
+3,PRE,2,17,['Why does a frog jumps higher than a tree.'],hope,2017-03-02 10:54:04
+3,POST,2,17,['Why does a frog jumps higher than a tree.'],hope,f,2017-03-02 10:54:19
+4,PRE,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],fear,2017-03-02 10:54:22
+4,POST,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],fear,f,2017-03-02 10:54:40
+5,PRE,3,1,"['My sister is Leia.\\\\pau=500\\\\ We used to live together, but now I live in a new building.\\\\pau=500\\\\ Do you live with your family.']",anger,2017-03-02 10:54:42
+5,POST,3,1,"['My sister is Leia.\\\\pau=500\\\\ We used to live together, but now I live in a new building.\\\\pau=500\\\\ Do you live with your family.']",anger,t,2017-03-02 10:55:07
+6,PRE,3,11,"['What is your favourite hobby?\\\\pau=500\\\\ Do you do it often?\\\\pau=500\\\\ If you answer no, why not?']",happy,2017-03-02 10:55:08
+6,POST,3,11,"['What is your favourite hobby?\\\\pau=500\\\\ Do you do it often?\\\\pau=500\\\\ If you answer no, why not?']",happy,t,2017-03-02 10:56:08
+7,PRE,1,2,"[""I don't have any teeth.\\\\pau=500\\\\ How often do you floss yours?""]",sad,2017-03-02 10:56:09
+7,POST,1,2,"[""I don't have any teeth.\\\\pau=500\\\\ How often do you floss yours?""]",sad,t,2017-03-02 10:57:01
+8,PRE,2,15,['A plane crashed on the border or US and Canada.\\\\pau=500\\\\ Where do they bury the survivors.'],fear,2017-03-02 10:57:09
+8,POST,2,15,['A plane crashed on the border or US and Canada.\\\\pau=500\\\\ Where do they bury the survivors.'],fear,f,2017-03-02 10:58:10
+9,PRE,3,15,"['Do you live in the city.\\\\pau=500\\\\ Where do you prefer to live, City or country-side.']",hope,2017-03-02 10:58:13
+9,POST,3,15,"['Do you live in the city.\\\\pau=500\\\\ Where do you prefer to live, City or country-side.']",hope,t,2017-03-02 10:58:26
+10,PRE,1,10,['How often do you usually go grocery shopping?\\\\pau=500\\\\ What do you usually buy?'],fear,2017-03-02 10:58:27
+10,POST,1,10,['How often do you usually go grocery shopping?\\\\pau=500\\\\ What do you usually buy?'],fear,t,2017-03-02 10:58:42
+11,PRE,1,9,['Have you paid your utilities for the last month?\\\\pau=500\\\\ How much are they?'],fear,2017-03-02 10:58:45
+11,POST,1,9,['Have you paid your utilities for the last month?\\\\pau=500\\\\ How much are they?'],fear,f,2017-03-02 10:59:07
+12,PRE,1,5,['Do you enjoy exercise?\\\\pau=500\\\\ Have you climbed 5 flights of stairs today?'],hope,2017-03-02 10:59:11
+12,POST,1,5,['Do you enjoy exercise?\\\\pau=500\\\\ Have you climbed 5 flights of stairs today?'],hope,t,2017-03-02 10:59:28
+13,PRE,1,3,['How many steps have you taken today?\\\\pau=500\\\\ Do you think it is over 3000?'],hope,2017-03-02 10:59:28
+13,POST,1,3,['How many steps have you taken today?\\\\pau=500\\\\ Do you think it is over 3000?'],hope,f,2017-03-02 10:59:40
+14,PRE,1,11,['Are you planning to go out for a meal today?\\\\pau=500\\\\ Where will you go if you do?'],sad,2017-03-02 10:59:42
+14,POST,1,11,['Are you planning to go out for a meal today?\\\\pau=500\\\\ Where will you go if you do?'],sad,f,2017-03-02 10:59:56
+15,PRE,3,6,['What is your favourite song?\\\\pau=500\\\\ Why do you like it?\\\\pau=500\\\\ I like robot rock'],happy,2017-03-02 10:59:57
+15,POST,3,6,['What is your favourite song?\\\\pau=500\\\\ Why do you like it?\\\\pau=500\\\\ I like robot rock'],happy,t,2017-03-02 11:00:14
+16,PRE,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],anger,2017-03-02 11:00:16
+16,POST,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],anger,f,2017-03-02 11:00:29
+17,PRE,2,35,"[""Mike's grandpa has 7 sons, each of them has one little sister.\\\\pau=500\\\\ How many children does Mike's grandpa have.""]",happy,2017-03-02 11:00:32
+17,POST,2,35,"[""Mike's grandpa has 7 sons, each of them has one little sister.\\\\pau=500\\\\ How many children does Mike's grandpa have.""]",happy,t,2017-03-02 11:01:11
+18,PRE,2,33,"[""Sam's apartment was on fire, but he could not push the door out to get out.\\\\pau500\\\\ How does he get out.""]",sad,2017-03-02 11:01:13
+18,POST,2,33,"[""Sam's apartment was on fire, but he could not push the door out to get out.\\\\pau500\\\\ How does he get out.""]",sad,t,2017-03-02 11:01:31
+19,PRE,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],happy,2017-03-02 11:01:33
+19,POST,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],happy,f,2017-03-02 11:01:48
+END OF INTERACTION SEQUENCE,"[2, 2, 2, 2, 3, 3, 3, 1, 2, 3, 1, 1, 1, 1, 1, 3, 3, 2, 2, 3]","[30, 31, 2, 17, 10, 1, 11, 2, 15, 15, 10, 9, 5, 3, 11, 6, 8, 35, 33, 9]","['sad', 'anger', 'anger', 'hope', 'fear', 'anger', 'happy', 'sad', 'fear', 'hope', 'fear', 'fear', 'hope', 'hope', 'sad', 'happy', 'anger', 'happy', 'sad', 'happy']",2017-03-02 11:01:48
+END OF INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-03-02 11:01:48
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-03-02 11:05:19
+NEW INTERACTION SEQUENCE,"[1, 3, 3, 2, 1, 2, 3, 3, 3, 1, 1, 2, 2, 2, 1, 3, 3, 1, 2, 2]","[12, 9, 5, 14, 4, 11, 3, 14, 11, 3, 10, 24, 31, 10, 5, 8, 10, 9, 12, 3]","['anger', 'happy', 'anger', 'anger', 'sad', 'fear', 'fear', 'happy', 'hope', 'sad', 'happy', 'hope', 'sad', 'fear', 'fear', 'hope', 'hope', 'anger', 'sad', 'happy']",2017-03-02 11:05:19
+0,PRE,1,12,['Do you like cooking?\\\\pau=500\\\\ What is your favourite food to make.'],anger,2017-03-02 11:05:22
+0,POST,1,12,['Do you like cooking?\\\\pau=500\\\\ What is your favourite food to make.'],anger,t,2017-03-02 11:05:46
+1,PRE,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],happy,2017-03-02 11:05:46
+1,POST,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],happy,t,2017-03-02 11:05:55
+2,PRE,3,5,"['My favourite music is from the chemical brothers,\\\\pau=500\\\\ Who is your favourite band and how long have you been listening to them.']",anger,2017-03-02 11:05:56
+2,POST,3,5,"['My favourite music is from the chemical brothers,\\\\pau=500\\\\ Who is your favourite band and how long have you been listening to them.']",anger,t,2017-03-02 11:06:16
+3,PRE,2,14,['Where would you like to live?\\\\pau=500\\\\ Why haven\xe2\x80\x99t you moved there?'],anger,2017-03-02 11:06:17
+3,POST,2,14,['Where would you like to live?\\\\pau=500\\\\ Why haven\xe2\x80\x99t you moved there?'],anger,t,2017-03-02 11:06:55
+4,PRE,1,4,['I know Tai Chee and practice it often.\\\\pau=500\\\\ What sport do you like?\\\\pau=500\\\\ Do you play it often?'],sad,2017-03-02 11:06:57
+4,POST,1,4,['I know Tai Chee and practice it often.\\\\pau=500\\\\ What sport do you like?\\\\pau=500\\\\ Do you play it often?'],sad,t,2017-03-02 11:07:22
+5,PRE,2,11,['Have you met anyone new lately?\\\\pau=500\\\\ Do you enjoy meeting new people?'],fear,2017-03-02 11:07:22
+5,POST,2,11,['Have you met anyone new lately?\\\\pau=500\\\\ Do you enjoy meeting new people?'],fear,t,2017-03-02 11:07:48
+6,PRE,3,3,['What do you like to do on the weekends?'],fear,2017-03-02 11:07:49
+6,POST,3,3,['What do you like to do on the weekends?'],fear,t,2017-03-02 11:08:19
+7,PRE,3,14,"['If your entire life was a movie, what would be the title.']",happy,2017-03-02 11:08:19
+7,POST,3,14,"['If your entire life was a movie, what would be the title.']",happy,t,2017-03-02 11:08:47
+8,PRE,3,11,"['What is your favourite hobby?\\\\pau=500\\\\ Do you do it often?\\\\pau=500\\\\ If you answer no, why not?']",hope,2017-03-02 11:08:48
+8,POST,3,11,"['What is your favourite hobby?\\\\pau=500\\\\ Do you do it often?\\\\pau=500\\\\ If you answer no, why not?']",hope,t,2017-03-02 11:09:10
+9,PRE,1,3,['How many steps have you taken today?\\\\pau=500\\\\ Do you think it is over 3000?'],sad,2017-03-02 11:09:11
+9,POST,1,3,['How many steps have you taken today?\\\\pau=500\\\\ Do you think it is over 3000?'],sad,t,2017-03-02 11:09:30
+10,PRE,1,10,['How often do you usually go grocery shopping?\\\\pau=500\\\\ What do you usually buy?'],happy,2017-03-02 11:09:30
+10,POST,1,10,['How often do you usually go grocery shopping?\\\\pau=500\\\\ What do you usually buy?'],happy,t,2017-03-02 11:09:52
+11,PRE,2,24,"['First, think of the color of clouds.\\\\pau=500\\\\ Next think of the color of snow.\\\\pau=500\\\\ Last, think of the color of the moon.\\\\pau=500\\\\ Now, what do cows drink.']",hope,2017-03-02 11:09:53
+11,POST,2,24,"['First, think of the color of clouds.\\\\pau=500\\\\ Next think of the color of snow.\\\\pau=500\\\\ Last, think of the color of the moon.\\\\pau=500\\\\ Now, what do cows drink.']",hope,t,2017-03-02 11:10:11
+12,PRE,2,31,"['A cow walked 10 metres towards north,\\\\pau=200\\\\ then walked 5 metres towards west,\\\\pau=200\\\\ where does its tail pointing to.']",sad,2017-03-02 11:10:12
+12,POST,2,31,"['A cow walked 10 metres towards north,\\\\pau=200\\\\ then walked 5 metres towards west,\\\\pau=200\\\\ where does its tail pointing to.']",sad,t,2017-03-02 11:10:29
+13,PRE,2,10,['Have you participated in any social events in the past week?\\\\pau=500\\\\ Which ones?\\\\pau=300\\\\ Did you enjoy them?'],fear,2017-03-02 11:10:31
+13,POST,2,10,['Have you participated in any social events in the past week?\\\\pau=500\\\\ Which ones?\\\\pau=300\\\\ Did you enjoy them?'],fear,t,2017-03-02 11:10:54
+14,PRE,1,5,['Do you enjoy exercise?\\\\pau=500\\\\ Have you climbed 5 flights of stairs today?'],fear,2017-03-02 11:10:56
+14,POST,1,5,['Do you enjoy exercise?\\\\pau=500\\\\ Have you climbed 5 flights of stairs today?'],fear,t,2017-03-02 11:11:17
+15,PRE,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],hope,2017-03-02 11:11:20
+15,POST,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],hope,t,2017-03-02 11:11:37
+16,PRE,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],hope,2017-03-02 11:11:38
+16,POST,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],hope,t,2017-03-02 11:12:10
+17,PRE,1,9,['Have you paid your utilities for the last month?\\\\pau=500\\\\ How much are they?'],anger,2017-03-02 11:12:12
+17,POST,1,9,['Have you paid your utilities for the last month?\\\\pau=500\\\\ How much are they?'],anger,t,2017-03-02 11:12:28
+18,PRE,2,12,['Have you read any interesting books recently?\\\\pau=500\\\\ Which one is your favourite?'],sad,2017-03-02 11:12:30
+18,POST,2,12,['Have you read any interesting books recently?\\\\pau=500\\\\ Which one is your favourite?'],sad,t,2017-03-02 11:12:55
+19,PRE,2,3,"['If you could spend 15 minutes with anyone, living or dead, who would you choose.\\\\pau=500\\\\ What would you talk about?']",happy,2017-03-02 11:12:56
+19,POST,2,3,"['If you could spend 15 minutes with anyone, living or dead, who would you choose.\\\\pau=500\\\\ What would you talk about?']",happy,t,2017-03-02 11:13:24
+END OF INTERACTION SEQUENCE,"[1, 3, 3, 2, 1, 2, 3, 3, 3, 1, 1, 2, 2, 2, 1, 3, 3, 1, 2, 2]","[12, 9, 5, 14, 4, 11, 3, 14, 11, 3, 10, 24, 31, 10, 5, 8, 10, 9, 12, 3]","['anger', 'happy', 'anger', 'anger', 'sad', 'fear', 'fear', 'happy', 'hope', 'sad', 'happy', 'hope', 'sad', 'fear', 'fear', 'hope', 'hope', 'anger', 'sad', 'happy']",2017-03-02 11:13:24
+END OF INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-03-02 11:13:24
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-03-02 11:23:28
+NEW INTERACTION SEQUENCE,"[3, 2, 3, 3, 3, 2, 3, 2, 2, 2, 1, 1, 3, 1, 1, 1, 3, 2, 1, 2]","[4, 12, 10, 8, 2, 19, 11, 37, 17, 14, 12, 2, 5, 4, 9, 10, 13, 32, 7, 30]","['hope', 'anger', 'sad', 'fear', 'fear', 'anger', 'hope', 'hope', 'happy', 'hope', 'happy', 'sad', 'fear', 'fear', 'sad', 'anger', 'happy', 'anger', 'happy', 'sad']",2017-03-02 11:23:28
+0,PRE,3,4,['How would you describe yourself in 5 words?'],hope,2017-03-02 11:23:43
+0,POST,3,4,['How would you describe yourself in 5 words?'],hope,t,2017-03-02 11:24:42
+1,PRE,2,12,['Have you read any interesting books recently?\\\\pau=500\\\\ Which one is your favourite?'],anger,2017-03-02 11:24:49
+1,POST,2,12,['Have you read any interesting books recently?\\\\pau=500\\\\ Which one is your favourite?'],anger,t,2017-03-02 11:25:14
+2,PRE,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],sad,2017-03-02 11:25:16
+2,POST,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],sad,t,2017-03-02 11:25:36
+3,PRE,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],fear,2017-03-02 11:25:37
+3,POST,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],fear,t,2017-03-02 11:25:49
+4,PRE,3,2,['What bad habits do you want to break?'],fear,2017-03-02 11:25:51
+4,POST,3,2,['What bad habits do you want to break?'],fear,t,2017-03-02 11:26:04
+5,PRE,2,19,['Who only works one day each year.'],anger,2017-03-02 11:26:06
+5,POST,2,19,['Who only works one day each year.'],anger,t,2017-03-02 11:26:30
+6,PRE,3,11,"['What is your favourite hobby?\\\\pau=500\\\\ Do you do it often?\\\\pau=500\\\\ If you answer no, why not?']",hope,2017-03-02 11:26:33
+6,POST,3,11,"['What is your favourite hobby?\\\\pau=500\\\\ Do you do it often?\\\\pau=500\\\\ If you answer no, why not?']",hope,t,2017-03-02 11:26:56
+7,PRE,2,37,"['How do you place 3 chopsticks to be a number larger than 3, but smaller than 4.']",hope,2017-03-02 11:26:57
+7,POST,2,37,"['How do you place 3 chopsticks to be a number larger than 3, but smaller than 4.']",hope,t,2017-03-02 11:28:56
+8,PRE,2,17,['Why does a frog jumps higher than a tree.'],happy,2017-03-02 11:29:11
+8,POST,2,17,['Why does a frog jumps higher than a tree.'],happy,t,2017-03-02 11:30:44
+9,PRE,2,14,['Where would you like to live?\\\\pau=500\\\\ Why haven\xe2\x80\x99t you moved there?'],hope,2017-03-02 11:31:00
+9,POST,2,14,['Where would you like to live?\\\\pau=500\\\\ Why haven\xe2\x80\x99t you moved there?'],hope,t,2017-03-02 11:31:18
+10,PRE,1,12,['Do you like cooking?\\\\pau=500\\\\ What is your favourite food to make.'],happy,2017-03-02 11:31:19
+10,POST,1,12,['Do you like cooking?\\\\pau=500\\\\ What is your favourite food to make.'],happy,t,2017-03-02 11:31:35
+11,PRE,1,2,"[""I don't have any teeth.\\\\pau=500\\\\ How often do you floss yours?""]",sad,2017-03-02 11:31:37
+11,POST,1,2,"[""I don't have any teeth.\\\\pau=500\\\\ How often do you floss yours?""]",sad,t,2017-03-02 11:31:51
+12,PRE,3,5,"['My favourite music is from the chemical brothers,\\\\pau=500\\\\ Who is your favourite band and how long have you been listening to them.']",fear,2017-03-02 11:31:52
+12,POST,3,5,"['My favourite music is from the chemical brothers,\\\\pau=500\\\\ Who is your favourite band and how long have you been listening to them.']",fear,t,2017-03-02 11:32:20
+13,PRE,1,4,['I know Tai Chee and practice it often.\\\\pau=500\\\\ What sport do you like?\\\\pau=500\\\\ Do you play it often?'],fear,2017-03-02 11:32:21
+13,POST,1,4,['I know Tai Chee and practice it often.\\\\pau=500\\\\ What sport do you like?\\\\pau=500\\\\ Do you play it often?'],fear,t,2017-03-02 11:32:54
+14,PRE,1,9,['Have you paid your utilities for the last month?\\\\pau=500\\\\ How much are they?'],sad,2017-03-02 11:32:57
+14,POST,1,9,['Have you paid your utilities for the last month?\\\\pau=500\\\\ How much are they?'],sad,t,2017-03-02 11:33:13
+15,PRE,1,10,['How often do you usually go grocery shopping?\\\\pau=500\\\\ What do you usually buy?'],anger,2017-03-02 11:33:14
+15,POST,1,10,['How often do you usually go grocery shopping?\\\\pau=500\\\\ What do you usually buy?'],anger,t,2017-03-02 11:33:25
+16,PRE,3,13,['I am almost two years old.\\\\pau=500\\\\ How old are you?\\\\pau=500\\\\ When is your birthday?'],happy,2017-03-02 11:33:26
+16,POST,3,13,['I am almost two years old.\\\\pau=500\\\\ How old are you?\\\\pau=500\\\\ When is your birthday?'],happy,t,2017-03-02 11:33:39
+17,PRE,2,32,"[""Sam's mom has 3 sons,\\\\pau=200\\\\ the first son is Peter, \\\\pau=200\\\\the second son is Mike,\\\\pau=200\\\\ what's the name of her third son.""]",anger,2017-03-02 11:33:41
+17,POST,2,32,"[""Sam's mom has 3 sons,\\\\pau=200\\\\ the first son is Peter, \\\\pau=200\\\\the second son is Mike,\\\\pau=200\\\\ what's the name of her third son.""]",anger,t,2017-03-02 11:34:14
+18,PRE,1,7,"['I heard fried food is delicious, but so bad for you.\\\\pau=500\\\\ Do you like it, if so What is your favourite?\\\\pau=500\\\\ Have you eaten fried food in the past few days?']",happy,2017-03-02 11:34:15
+18,POST,1,7,"['I heard fried food is delicious, but so bad for you.\\\\pau=500\\\\ Do you like it, if so What is your favourite?\\\\pau=500\\\\ Have you eaten fried food in the past few days?']",happy,t,2017-03-02 11:34:32
+19,PRE,2,30,['What is sleeping beauty most afraid of.'],sad,2017-03-02 11:34:34
+19,POST,2,30,['What is sleeping beauty most afraid of.'],sad,t,2017-03-02 11:34:53
+END OF INTERACTION SEQUENCE,"[3, 2, 3, 3, 3, 2, 3, 2, 2, 2, 1, 1, 3, 1, 1, 1, 3, 2, 1, 2]","[4, 12, 10, 8, 2, 19, 11, 37, 17, 14, 12, 2, 5, 4, 9, 10, 13, 32, 7, 30]","['hope', 'anger', 'sad', 'fear', 'fear', 'anger', 'hope', 'hope', 'happy', 'hope', 'happy', 'sad', 'fear', 'fear', 'sad', 'anger', 'happy', 'anger', 'happy', 'sad']",2017-03-02 11:34:53
+END OF INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-03-02 11:34:53
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-03-02 11:37:53
+NEW INTERACTION SEQUENCE,"[2, 1, 1, 1, 2, 2, 3, 3, 2, 3, 2, 2, 3, 2, 1, 1, 3, 3, 1, 3]","[4, 6, 8, 10, 9, 31, 6, 2, 27, 11, 13, 12, 15, 6, 5, 12, 9, 10, 3, 5]","['fear', 'happy', 'hope', 'hope', 'happy', 'hope', 'anger', 'anger', 'happy', 'sad', 'happy', 'sad', 'anger', 'hope', 'fear', 'fear', 'sad', 'fear', 'anger', 'sad']",2017-03-02 11:37:53
+0,PRE,2,4,['Have you met anyone new lately?\\\\pau=500\\\\ Do you enjoy meeting new people?'],fear,2017-03-02 11:37:59
+0,POST,2,4,['Have you met anyone new lately?\\\\pau=500\\\\ Do you enjoy meeting new people?'],fear,t,2017-03-02 11:38:15
+1,PRE,1,6,['What healthy food do you like?\\\\pau=500\\\\ Have you cooked and eaten a healthy meal in the past few days?'],happy,2017-03-02 11:38:17
+1,POST,1,6,['What healthy food do you like?\\\\pau=500\\\\ Have you cooked and eaten a healthy meal in the past few days?'],happy,t,2017-03-02 11:38:38
+2,PRE,1,8,['Have you paid your rent for the last month?\\\\pau=500\\\\ Do you find it expensive?'],hope,2017-03-02 11:38:39
+2,POST,1,8,['Have you paid your rent for the last month?\\\\pau=500\\\\ Do you find it expensive?'],hope,t,2017-03-02 11:38:55
+3,PRE,1,10,['How often do you usually go grocery shopping?\\\\pau=500\\\\ What do you usually buy?'],hope,2017-03-02 11:38:55
+3,POST,1,10,['How often do you usually go grocery shopping?\\\\pau=500\\\\ What do you usually buy?'],hope,t,2017-03-02 11:39:16
+4,PRE,2,9,"['A person dropped from the plane, but he survived,\\\\pau=500\\\\ how is that possible.']",happy,2017-03-02 11:39:17
+4,POST,2,9,"['A person dropped from the plane, but he survived,\\\\pau=500\\\\ how is that possible.']",happy,t,2017-03-02 11:39:53
+5,PRE,2,31,"['The height limit of a bridge is 10 metres,\\\\pau=200\\\\ but the boat is more than 10 metres.\\\\pau=500\\\\ What should we do.']",hope,2017-03-02 11:39:59
+5,POST,2,31,"['The height limit of a bridge is 10 metres,\\\\pau=200\\\\ but the boat is more than 10 metres.\\\\pau=500\\\\ What should we do.']",hope,t,2017-03-02 11:40:56
+6,PRE,3,6,['What is your favourite song?\\\\pau=500\\\\ Why do you like it?\\\\pau=500\\\\ I like robot rock'],anger,2017-03-02 11:40:58
+6,POST,3,6,['What is your favourite song?\\\\pau=500\\\\ Why do you like it?\\\\pau=500\\\\ I like robot rock'],anger,t,2017-03-02 11:41:16
+7,PRE,3,2,['What bad habits do you want to break?'],anger,2017-03-02 11:41:19
+7,POST,3,2,['What bad habits do you want to break?'],anger,t,2017-03-02 11:42:15
+8,PRE,2,27,['What cream does become in the north pole.'],happy,2017-03-02 11:42:17
+8,POST,2,27,['What cream does become in the north pole.'],happy,t,2017-03-02 11:43:23
+9,PRE,3,11,"['What is your favourite hobby?\\\\pau=500\\\\ Do you do it often?\\\\pau=500\\\\ If you answer no, why not?']",sad,2017-03-02 11:43:23
+9,POST,3,11,"['What is your favourite hobby?\\\\pau=500\\\\ Do you do it often?\\\\pau=500\\\\ If you answer no, why not?']",sad,t,2017-03-02 11:43:43
+10,PRE,2,13,['Why do the new socks have two holes.'],happy,2017-03-02 11:43:45
+10,POST,2,13,['Why do the new socks have two holes.'],happy,t,2017-03-02 11:43:58
+11,PRE,2,12,['Who only works one day each year.'],sad,2017-03-02 11:44:00
+11,POST,2,12,['Who only works one day each year.'],sad,t,2017-03-02 11:44:22
+12,PRE,3,15,"['Do you live in the city.\\\\pau=500\\\\ Where do you prefer to live, City or country-side.']",anger,2017-03-02 11:44:23
+12,POST,3,15,"['Do you live in the city.\\\\pau=500\\\\ Where do you prefer to live, City or country-side.']",anger,t,2017-03-02 11:44:40
+13,PRE,2,6,"['If you had unlimited resources, how would you live your life?']",hope,2017-03-02 11:44:42
+13,POST,2,6,"['If you had unlimited resources, how would you live your life?']",hope,t,2017-03-02 11:44:58
+14,PRE,1,5,['Do you enjoy exercise?\\\\pau=500\\\\ Have you climbed 5 flights of stairs today?'],fear,2017-03-02 11:44:58
+14,POST,1,5,['Do you enjoy exercise?\\\\pau=500\\\\ Have you climbed 5 flights of stairs today?'],fear,t,2017-03-02 11:45:12
+15,PRE,1,12,['Do you like cooking?\\\\pau=500\\\\ What is your favourite food to make.'],fear,2017-03-02 11:45:13
+15,POST,1,12,['Do you like cooking?\\\\pau=500\\\\ What is your favourite food to make.'],fear,t,2017-03-02 11:45:33
+16,PRE,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],sad,2017-03-02 11:45:35
+16,POST,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],sad,t,2017-03-02 11:45:51
+17,PRE,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],fear,2017-03-02 11:45:55
+17,POST,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],fear,t,2017-03-02 11:46:53
+18,PRE,1,3,['How many steps have you taken today?\\\\pau=500\\\\ Do you think it is over 3000?'],anger,2017-03-02 11:46:55
+18,POST,1,3,['How many steps have you taken today?\\\\pau=500\\\\ Do you think it is over 3000?'],anger,t,2017-03-02 11:47:09
+19,PRE,3,5,"['My favourite music is from the chemical brothers,\\\\pau=500\\\\ Who is your favourite band and how long have you been listening to them.']",sad,2017-03-02 11:47:18
+19,POST,3,5,"['My favourite music is from the chemical brothers,\\\\pau=500\\\\ Who is your favourite band and how long have you been listening to them.']",sad,t,2017-03-02 11:47:55
+END OF INTERACTION SEQUENCE,"[2, 1, 1, 1, 2, 2, 3, 3, 2, 3, 2, 2, 3, 2, 1, 1, 3, 3, 1, 3]","[4, 6, 8, 10, 9, 31, 6, 2, 27, 11, 13, 12, 15, 6, 5, 12, 9, 10, 3, 5]","['fear', 'happy', 'hope', 'hope', 'happy', 'hope', 'anger', 'anger', 'happy', 'sad', 'happy', 'sad', 'anger', 'hope', 'fear', 'fear', 'sad', 'fear', 'anger', 'sad']",2017-03-02 11:47:55
+END OF INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-03-02 11:47:55
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-03-02 12:06:38
+NEW INTERACTION SEQUENCE,"[3, 2, 1, 2, 3, 3, 1, 1, 1, 2, 2, 3, 2, 1, 1, 2, 2, 3, 3, 3]","[1, 21, 5, 37, 8, 5, 8, 3, 11, 13, 2, 10, 6, 2, 10, 23, 35, 7, 9, 14]","['sad', 'hope', 'anger', 'fear', 'fear', 'happy', 'hope', 'fear', 'happy', 'sad', 'fear', 'anger', 'anger', 'happy', 'sad', 'hope', 'sad', 'happy', 'anger', 'hope']",2017-03-02 12:06:38
+0,PRE,3,1,"['My sister is Leia.\\\\pau=500\\\\ We used to live together, but now I live in a new building.\\\\pau=500\\\\ Do you live with your family.']",sad,2017-03-02 12:06:41
+0,POST,3,1,"['My sister is Leia.\\\\pau=500\\\\ We used to live together, but now I live in a new building.\\\\pau=500\\\\ Do you live with your family.']",sad,t,2017-03-02 12:07:02
+1,PRE,2,21,"['Sam shaves forty times a day,\\\\pau=500\\\\ but why he still have moustach.']",hope,2017-03-02 12:07:03
+1,POST,2,21,"['Sam shaves forty times a day,\\\\pau=500\\\\ but why he still have moustach.']",hope,t,2017-03-02 12:07:59
+2,PRE,1,5,['Do you enjoy exercise?\\\\pau=500\\\\ Have you climbed 5 flights of stairs today?'],anger,2017-03-02 12:08:01
+2,POST,1,5,['Do you enjoy exercise?\\\\pau=500\\\\ Have you climbed 5 flights of stairs today?'],anger,t,2017-03-02 12:08:13
+3,PRE,2,37,"['How do you place 3 chopsticks to be a number larger than 3, but smaller than 4.']",fear,2017-03-02 12:08:14
+3,POST,2,37,"['How do you place 3 chopsticks to be a number larger than 3, but smaller than 4.']",fear,t,2017-03-02 12:09:31
+4,PRE,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],fear,2017-03-02 12:09:42
+4,POST,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],fear,t,2017-03-02 12:10:00
+5,PRE,3,5,"['My favourite music is from the chemical brothers,\\\\pau=500\\\\ Who is your favourite band and how long have you been listening to them.']",happy,2017-03-02 12:10:02
+5,POST,3,5,"['My favourite music is from the chemical brothers,\\\\pau=500\\\\ Who is your favourite band and how long have you been listening to them.']",happy,f,2017-03-02 12:10:21
+6,PRE,1,8,['Have you paid your rent for the last month?\\\\pau=500\\\\ Do you find it expensive?'],hope,2017-03-02 12:10:21
+6,POST,1,8,['Have you paid your rent for the last month?\\\\pau=500\\\\ Do you find it expensive?'],hope,t,2017-03-02 12:10:35
+7,PRE,1,3,['How many steps have you taken today?\\\\pau=500\\\\ Do you think it is over 3000?'],fear,2017-03-02 12:10:35
+7,POST,1,3,['How many steps have you taken today?\\\\pau=500\\\\ Do you think it is over 3000?'],fear,t,2017-03-02 12:10:53
+8,PRE,1,11,['Are you planning to go out for a meal today?\\\\pau=500\\\\ Where will you go if you do?'],happy,2017-03-02 12:10:54
+8,POST,1,11,['Are you planning to go out for a meal today?\\\\pau=500\\\\ Where will you go if you do?'],happy,t,2017-03-02 12:11:07
+9,PRE,2,13,"['If you had unlimited resources, how would you live your life?']",sad,2017-03-02 12:11:07
+9,POST,2,13,"['If you had unlimited resources, how would you live your life?']",sad,t,2017-03-02 12:11:20
+10,PRE,2,2,['How much time are you spending on social media?\\\\pau=500\\\\ What is your favourite platform to use?'],fear,2017-03-02 12:11:23
+10,POST,2,2,['How much time are you spending on social media?\\\\pau=500\\\\ What is your favourite platform to use?'],fear,f,2017-03-02 12:11:38
+11,PRE,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],anger,2017-03-02 12:11:41
+11,POST,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],anger,t,2017-03-02 12:12:04
+12,PRE,2,6,['When is the last time you saw your best friend?\\\\pau=500\\\\ Are you planning to go out with them this week?'],anger,2017-03-02 12:12:05
+12,POST,2,6,['When is the last time you saw your best friend?\\\\pau=500\\\\ Are you planning to go out with them this week?'],anger,t,2017-03-02 12:12:21
+13,PRE,1,2,"[""I don't have any teeth.\\\\pau=500\\\\ How often do you floss yours?""]",happy,2017-03-02 12:12:22
+13,POST,1,2,"[""I don't have any teeth.\\\\pau=500\\\\ How often do you floss yours?""]",happy,t,2017-03-02 12:12:36
+14,PRE,1,10,['How often do you usually go grocery shopping?\\\\pau=500\\\\ What do you usually buy?'],sad,2017-03-02 12:12:38
+14,POST,1,10,['How often do you usually go grocery shopping?\\\\pau=500\\\\ What do you usually buy?'],sad,t,2017-03-02 12:12:56
+15,PRE,2,23,['A mile-long train is moving at sixty miles an hour when it reaches a mile-long tunnel.\\\\pau=500\\\\ How long does it take the entire train to pass through the tunnel?'],hope,2017-03-02 12:12:58
+15,POST,2,23,['A mile-long train is moving at sixty miles an hour when it reaches a mile-long tunnel.\\\\pau=500\\\\ How long does it take the entire train to pass through the tunnel?'],hope,t,2017-03-02 12:13:39
+16,PRE,2,35,"[""Mike's grandpa has 7 sons, each of them has one little sister.\\\\pau=500\\\\ How many children does Mike's grandpa have.""]",sad,2017-03-02 12:13:43
+16,POST,2,35,"[""Mike's grandpa has 7 sons, each of them has one little sister.\\\\pau=500\\\\ How many children does Mike's grandpa have.""]",sad,t,2017-03-02 12:14:06
+17,PRE,3,7,"['My favourite subject is human psychology, so I can understand people.\\\\pau=500\\\\ What was your favourite subject in school.']",happy,2017-03-02 12:14:07
+17,POST,3,7,"['My favourite subject is human psychology, so I can understand people.\\\\pau=500\\\\ What was your favourite subject in school.']",happy,t,2017-03-02 12:14:26
+18,PRE,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],anger,2017-03-02 12:14:28
+18,POST,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],anger,t,2017-03-02 12:14:38
+19,PRE,3,14,"['If your entire life was a movie, what would be the title.']",hope,2017-03-02 12:14:39
+19,POST,3,14,"['If your entire life was a movie, what would be the title.']",hope,f,2017-03-02 12:15:04
+END OF INTERACTION SEQUENCE,"[3, 2, 1, 2, 3, 3, 1, 1, 1, 2, 2, 3, 2, 1, 1, 2, 2, 3, 3, 3]","[1, 21, 5, 37, 8, 5, 8, 3, 11, 13, 2, 10, 6, 2, 10, 23, 35, 7, 9, 14]","['sad', 'hope', 'anger', 'fear', 'fear', 'happy', 'hope', 'fear', 'happy', 'sad', 'fear', 'anger', 'anger', 'happy', 'sad', 'hope', 'sad', 'happy', 'anger', 'hope']",2017-03-02 12:15:04
+END OF INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-03-02 12:15:04
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-03-02 12:16:02
+NEW INTERACTION SEQUENCE,"[3, 2, 2, 1, 2, 1, 2, 3, 3, 3, 2, 1, 2, 1, 3, 2, 1, 1, 3, 3]","[11, 2, 17, 3, 35, 2, 23, 5, 9, 10, 31, 8, 27, 1, 15, 38, 7, 10, 8, 6]","['sad', 'happy', 'anger', 'hope', 'hope', 'sad', 'happy', 'fear', 'happy', 'sad', 'happy', 'fear', 'fear', 'anger', 'anger', 'hope', 'anger', 'sad', 'hope', 'fear']",2017-03-02 12:16:02
+0,PRE,3,11,"['What is your favourite hobby?\\\\pau=500\\\\ Do you do it often?\\\\pau=500\\\\ If you answer no, why not?']",sad,2017-03-02 12:16:06
+0,POST,3,11,"['What is your favourite hobby?\\\\pau=500\\\\ Do you do it often?\\\\pau=500\\\\ If you answer no, why not?']",sad,t,2017-03-02 12:16:36
+1,PRE,2,2,['How much time are you spending on social media?\\\\pau=500\\\\ What is your favourite platform to use?'],happy,2017-03-02 12:16:38
+1,POST,2,2,['How much time are you spending on social media?\\\\pau=500\\\\ What is your favourite platform to use?'],happy,t,2017-03-02 12:16:56
+2,PRE,2,17,['Why does a frog jumps higher than a tree.'],anger,2017-03-02 12:16:56
+2,POST,2,17,['Why does a frog jumps higher than a tree.'],anger,f,2017-03-02 12:17:21
+3,PRE,1,3,['How many steps have you taken today?\\\\pau=500\\\\ Do you think it is over 3000?'],hope,2017-03-02 12:17:22
+3,POST,1,3,['How many steps have you taken today?\\\\pau=500\\\\ Do you think it is over 3000?'],hope,t,2017-03-02 12:17:38
+4,PRE,2,35,"[""Mike's grandpa has 7 sons, each of them has one little sister.\\\\pau=500\\\\ How many children does Mike's grandpa have.""]",hope,2017-03-02 12:17:42
+4,POST,2,35,"[""Mike's grandpa has 7 sons, each of them has one little sister.\\\\pau=500\\\\ How many children does Mike's grandpa have.""]",hope,t,2017-03-02 12:17:56
+5,PRE,1,2,"[""I don't have any teeth.\\\\pau=500\\\\ How often do you floss yours?""]",sad,2017-03-02 12:17:57
+5,POST,1,2,"[""I don't have any teeth.\\\\pau=500\\\\ How often do you floss yours?""]",sad,t,2017-03-02 12:18:07
+6,PRE,2,23,['A mile-long train is moving at sixty miles an hour when it reaches a mile-long tunnel.\\\\pau=500\\\\ How long does it take the entire train to pass through the tunnel?'],happy,2017-03-02 12:18:09
+6,POST,2,23,['A mile-long train is moving at sixty miles an hour when it reaches a mile-long tunnel.\\\\pau=500\\\\ How long does it take the entire train to pass through the tunnel?'],happy,t,2017-03-02 12:18:44
+7,PRE,3,5,"['My favourite music is from the chemical brothers,\\\\pau=500\\\\ Who is your favourite band and how long have you been listening to them.']",fear,2017-03-02 12:18:45
+7,POST,3,5,"['My favourite music is from the chemical brothers,\\\\pau=500\\\\ Who is your favourite band and how long have you been listening to them.']",fear,t,2017-03-02 12:19:07
+8,PRE,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],happy,2017-03-02 12:19:08
+8,POST,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],happy,t,2017-03-02 12:19:20
+9,PRE,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],sad,2017-03-02 12:19:21
+9,POST,3,10,['When was the last time you tried something new?\\\\pau=500\\\\ What was it?'],sad,t,2017-03-02 12:19:38
+10,PRE,2,31,"['A cow walked 10 metres towards north,\\\\pau=200\\\\ then walked 5 metres towards west,\\\\pau=200\\\\ where does its tail pointing to.']",happy,2017-03-02 12:19:39
+10,POST,2,31,"['A cow walked 10 metres towards north,\\\\pau=200\\\\ then walked 5 metres towards west,\\\\pau=200\\\\ where does its tail pointing to.']",happy,t,2017-03-02 12:19:55
+11,PRE,1,8,['Have you paid your rent for the last month?\\\\pau=500\\\\ Do you find it expensive?'],fear,2017-03-02 12:19:57
+11,POST,1,8,['Have you paid your rent for the last month?\\\\pau=500\\\\ Do you find it expensive?'],fear,t,2017-03-02 12:20:11
+12,PRE,2,27,"['If you were to spell out the numbers,\\\\pau=200\\\\ how far would you have to go before encountering the letter A.']",fear,2017-03-02 12:20:12
+12,POST,2,27,"['If you were to spell out the numbers,\\\\pau=200\\\\ how far would you have to go before encountering the letter A.']",fear,t,2017-03-02 12:20:27
+13,PRE,1,1,['Have you eaten today?\\\\pau=500\\\\ What did you have for breakfast?'],anger,2017-03-02 12:20:29
+13,POST,1,1,['Have you eaten today?\\\\pau=500\\\\ What did you have for breakfast?'],anger,t,2017-03-02 12:20:44
+14,PRE,3,15,"['Do you live in the city.\\\\pau=500\\\\ Where do you prefer to live, City or country-side.']",anger,2017-03-02 12:20:46
+14,POST,3,15,"['Do you live in the city.\\\\pau=500\\\\ Where do you prefer to live, City or country-side.']",anger,t,2017-03-02 12:21:01
+15,PRE,2,38,"['The height limit of a bridge is 10 metres,\\\\pau=200\\\\ but the boat is more than 10 metres.\\\\pau=500\\\\ What should we do.']",hope,2017-03-02 12:21:02
+15,POST,2,38,"['The height limit of a bridge is 10 metres,\\\\pau=200\\\\ but the boat is more than 10 metres.\\\\pau=500\\\\ What should we do.']",hope,t,2017-03-02 12:21:57
+16,PRE,1,7,"['I heard fried food is delicious, but so bad for you.\\\\pau=500\\\\ Do you like it, if so What is your favourite?\\\\pau=500\\\\ Have you eaten fried food in the past few days?']",anger,2017-03-02 12:22:00
+16,POST,1,7,"['I heard fried food is delicious, but so bad for you.\\\\pau=500\\\\ Do you like it, if so What is your favourite?\\\\pau=500\\\\ Have you eaten fried food in the past few days?']",anger,t,2017-03-02 12:22:16
+17,PRE,1,10,['How often do you usually go grocery shopping?\\\\pau=500\\\\ What do you usually buy?'],sad,2017-03-02 12:22:19
+17,POST,1,10,['How often do you usually go grocery shopping?\\\\pau=500\\\\ What do you usually buy?'],sad,f,2017-03-02 12:22:36
+18,PRE,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],hope,2017-03-02 12:22:37
+18,POST,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],hope,t,2017-03-02 12:22:50
+19,PRE,3,6,['What is your favourite song?\\\\pau=500\\\\ Why do you like it?\\\\pau=500\\\\ I like robot rock'],fear,2017-03-02 12:22:51
+19,POST,3,6,['What is your favourite song?\\\\pau=500\\\\ Why do you like it?\\\\pau=500\\\\ I like robot rock'],fear,t,2017-03-02 12:23:14
+END OF INTERACTION SEQUENCE,"[3, 2, 2, 1, 2, 1, 2, 3, 3, 3, 2, 1, 2, 1, 3, 2, 1, 1, 3, 3]","[11, 2, 17, 3, 35, 2, 23, 5, 9, 10, 31, 8, 27, 1, 15, 38, 7, 10, 8, 6]","['sad', 'happy', 'anger', 'hope', 'hope', 'sad', 'happy', 'fear', 'happy', 'sad', 'happy', 'fear', 'fear', 'anger', 'anger', 'hope', 'anger', 'sad', 'hope', 'fear']",2017-03-02 12:23:14
+END OF INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-03-02 12:23:14
+NEW INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-03-02 12:33:21
+NEW INTERACTION SEQUENCE,"[3, 2, 3, 2, 3, 1, 1, 2, 1, 2, 1, 3, 1, 1, 3, 3, 2, 2, 1, 2]","[3, 3, 15, 4, 7, 6, 1, 2, 4, 23, 7, 8, 2, 11, 12, 9, 21, 18, 10, 7]","['fear', 'happy', 'anger', 'happy', 'sad', 'sad', 'anger', 'hope', 'sad', 'hope', 'anger', 'hope', 'hope', 'happy', 'fear', 'anger', 'fear', 'happy', 'fear', 'sad']",2017-03-02 12:33:21
+0,PRE,3,3,['What do you like to do on the weekends?'],fear,2017-03-02 12:35:19
+0,POST,3,3,['What do you like to do on the weekends?'],fear,t,2017-03-02 12:35:34
+1,PRE,2,3,['A plane crashed on the border or US and Canada.\\\\pau=500\\\\ Where do they bury the survivors.'],happy,2017-03-02 12:35:36
+1,POST,2,3,['A plane crashed on the border or US and Canada.\\\\pau=500\\\\ Where do they bury the survivors.'],happy,t,2017-03-02 12:36:07
+2,PRE,3,15,"['Do you live in the city.\\\\pau=500\\\\ Where do you prefer to live, City or country-side.']",anger,2017-03-02 12:36:25
+2,POST,3,15,"['Do you live in the city.\\\\pau=500\\\\ Where do you prefer to live, City or country-side.']",anger,t,2017-03-02 12:36:35
+3,PRE,2,4,"['A person dropped from the plane, but he survived,\\\\pau=500\\\\ how is that possible.']",happy,2017-03-02 12:36:38
+3,POST,2,4,"['A person dropped from the plane, but he survived,\\\\pau=500\\\\ how is that possible.']",happy,t,2017-03-02 12:36:59
+4,PRE,3,7,"['My favourite subject is human psychology, so I can understand people.\\\\pau=500\\\\ What was your favourite subject in school.']",sad,2017-03-02 12:37:06
+4,POST,3,7,"['My favourite subject is human psychology, so I can understand people.\\\\pau=500\\\\ What was your favourite subject in school.']",sad,t,2017-03-02 12:37:28
+5,PRE,1,6,['What healthy food do you like?\\\\pau=500\\\\ Have you cooked and eaten a healthy meal in the past few days?'],sad,2017-03-02 12:37:28
+5,POST,1,6,['What healthy food do you like?\\\\pau=500\\\\ Have you cooked and eaten a healthy meal in the past few days?'],sad,t,2017-03-02 12:37:47
+6,PRE,1,1,['Have you eaten today?\\\\pau=500\\\\ What did you have for breakfast?'],anger,2017-03-02 12:37:48
+6,POST,1,1,['Have you eaten today?\\\\pau=500\\\\ What did you have for breakfast?'],anger,t,2017-03-02 12:37:58
+7,PRE,2,2,['Where would you like to live?\\\\pau=500\\\\ Why haven\xe2\x80\x99t you moved there?'],hope,2017-03-02 12:37:59
+7,POST,2,2,['Where would you like to live?\\\\pau=500\\\\ Why haven\xe2\x80\x99t you moved there?'],hope,t,2017-03-02 12:38:15
+8,PRE,1,4,['I know Tai Chee and practice it often.\\\\pau=500\\\\ What sport do you like?\\\\pau=500\\\\ Do you play it often?'],sad,2017-03-02 12:38:16
+8,POST,1,4,['I know Tai Chee and practice it often.\\\\pau=500\\\\ What sport do you like?\\\\pau=500\\\\ Do you play it often?'],sad,t,2017-03-02 12:38:34
+9,PRE,2,23,"[""Mike's grandpa has 7 sons, each of them has one little sister.\\\\pau=500\\\\ How many children does Mike's grandpa have.""]",hope,2017-03-02 12:38:35
+9,POST,2,23,"[""Mike's grandpa has 7 sons, each of them has one little sister.\\\\pau=500\\\\ How many children does Mike's grandpa have.""]",hope,t,2017-03-02 12:38:50
+10,PRE,1,7,"['I heard fried food is delicious, but so bad for you.\\\\pau=500\\\\ Do you like it, if so What is your favourite?\\\\pau=500\\\\ Have you eaten fried food in the past few days?']",anger,2017-03-02 12:38:51
+10,POST,1,7,"['I heard fried food is delicious, but so bad for you.\\\\pau=500\\\\ Do you like it, if so What is your favourite?\\\\pau=500\\\\ Have you eaten fried food in the past few days?']",anger,t,2017-03-02 12:39:10
+11,PRE,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],hope,2017-03-02 12:39:11
+11,POST,3,8,['What is your current occupation?\\\\pau=500\\\\ Mine is just being a robot.'],hope,t,2017-03-02 12:39:26
+12,PRE,1,2,"[""I don't have any teeth.\\\\pau=500\\\\ How often do you floss yours?""]",hope,2017-03-02 12:39:27
+12,POST,1,2,"[""I don't have any teeth.\\\\pau=500\\\\ How often do you floss yours?""]",hope,t,2017-03-02 12:39:35
+13,PRE,1,11,['Are you planning to go out for a meal today?\\\\pau=500\\\\ Where will you go if you do?'],happy,2017-03-02 12:39:36
+13,POST,1,11,['Are you planning to go out for a meal today?\\\\pau=500\\\\ Where will you go if you do?'],happy,t,2017-03-02 12:39:48
+14,PRE,3,12,"['My name is Luke,\\\\pau=500\\\\ what is your name?\\\\pau=500\\\\ What is its meaning.']",fear,2017-03-02 12:39:49
+14,POST,3,12,"['My name is Luke,\\\\pau=500\\\\ what is your name?\\\\pau=500\\\\ What is its meaning.']",fear,t,2017-03-02 12:40:04
+15,PRE,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],anger,2017-03-02 12:40:05
+15,POST,3,9,['I was born in France.\\\\pau=500\\\\ Where were you born?'],anger,t,2017-03-02 12:40:15
+16,PRE,2,21,"[""Sam's apartment was on fire, but he could not push the door out to get out.\\\\pau=500\\\\ How does he get out.""]",fear,2017-03-02 12:40:15
+16,POST,2,21,"[""Sam's apartment was on fire, but he could not push the door out to get out.\\\\pau=500\\\\ How does he get out.""]",fear,t,2017-03-02 12:40:38
+17,PRE,2,18,['What is sleeping beauty most afraid of.'],happy,2017-03-02 12:40:41
+17,POST,2,18,['What is sleeping beauty most afraid of.'],happy,t,2017-03-02 12:40:54
+18,PRE,1,10,['How often do you usually go grocery shopping?\\\\pau=500\\\\ What do you usually buy?'],fear,2017-03-02 12:40:57
+18,POST,1,10,['How often do you usually go grocery shopping?\\\\pau=500\\\\ What do you usually buy?'],fear,t,2017-03-02 12:41:15
+19,PRE,2,7,['Who only works one day each year.'],sad,2017-03-02 12:41:16
+19,POST,2,7,['Who only works one day each year.'],sad,t,2017-03-02 12:41:51
+END OF INTERACTION SEQUENCE,"[3, 2, 3, 2, 3, 1, 1, 2, 1, 2, 1, 3, 1, 1, 3, 3, 2, 2, 1, 2]","[3, 3, 15, 4, 7, 6, 1, 2, 4, 23, 7, 8, 2, 11, 12, 9, 21, 18, 10, 7]","['fear', 'happy', 'anger', 'happy', 'sad', 'sad', 'anger', 'hope', 'sad', 'hope', 'anger', 'hope', 'hope', 'happy', 'fear', 'anger', 'fear', 'happy', 'fear', 'sad']",2017-03-02 12:41:51
+END OF INTERACTION SEQUENCE,TASK SECQUENCE,QUESTION SEQUENCE,EMOTION SEQUENCE,2017-03-02 12:41:51

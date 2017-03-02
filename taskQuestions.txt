@@ -1,4 +1,5 @@
-﻿1	Have you eaten today?\\pau=500\\ What did you have for breakfast?
+﻿Empty First line
+1	Have you eaten today?\\pau=500\\ What did you have for breakfast?
 1	I don't have any teeth.\\pau=500\\ How often do you floss yours?
 1	How many steps have you taken today?\\pau=500\\ Do you think it is over 3000?
 1	I know Tai Chee and practice it often.\\pau=500\\ What sport do you like?\\pau=500\\ Do you play it often?
@@ -25,25 +26,9 @@
 2	Have you read any interesting books recently?\\pau=500\\ Which one is your favourite?
 2	If you had unlimited resources, how would you live your life?
 2	Where would you like to live?\\pau=500\\ Why haven’t you moved there?
-3	My sister is Leia.\\pau=500\\ We used to live together, but now I live in a new building.\\pau=500\\ Do you live with your family.
-3	What bad habits do you want to break?
-3	What do you like to do on the weekends?
-3	How would you describe yourself in 5 words?
-3	My favourite music is from the chemical brothers,\\pau=500\\ Who is your favourite band and how long have you been listening to them.
-3	What is your favourite song?\\pau=500\\ Why do you like it?\\pau=500\\ I like robot rock
-3	My favourite subject is human psychology, so I can understand people.\\pau=500\\ What was your favourite subject in school.
-3	What is your current occupation?\\pau=500\\ Mine is just being a robot.
-3	I was born in France.\\pau=500\\ Where were you born?
-3	When was the last time you tried something new?\\pau=500\\ What was it?
-3	What is your favourite hobby?\\pau=500\\ Do you do it often?\\pau=500\\ If you answer no, why not?
-3	My name is Luke,\\pau=500\\ what is your name?\\pau=500\\ What is its meaning.
-3	I am almost two years old.\\pau=500\\ How old are you?\\pau=500\\ When is your birthday?
-3	If your entire life was a movie, what would be the title.
-3	Do you live in the city.\\pau=500\\ Where do you prefer to live, City or country-side.
 2	A plane crashed on the border or US and Canada.\\pau=500\\ Where do they bury the survivors.
 2	A person dropped from the plane, but he survived,\\pau=500\\ how is that possible.
 2	Why does a frog jumps higher than a tree.
-3	What's the first thing you do when you wake up in the morning.
 2	When a car is turning left,\\pau=500\\ which tire dosen't turn.
 2	Who only works one day each year.
 2	Why do the new socks have two holes.
@@ -59,10 +44,26 @@
 2	What is sleeping beauty most afraid of.
 2	A cow walked 10 metres towards north,\\pau=200\\ then walked 5 metres towards west,\\pau=200\\ where does its tail pointing to.
 2	Sam's mom has 3 sons,\\pau=200\\ the first son is Peter, \\pau=200\\the second son is Mike,\\pau=200\\ what's the name of her third son.
-2	Sam's apartment was on fire, but he could not push the door out to get out.\\pau500\\ How does he get out.
+2	Sam's apartment was on fire, but he could not push the door out to get out.\\pau=500\\ How does he get out.
 2	What cream does become in the north pole.
 2	Mike's grandpa has 7 sons, each of them has one little sister.\\pau=500\\ How many children does Mike's grandpa have.
 2	In what case does 11 plus 2 is equal to 1.
 2	How do you place 3 chopsticks to be a number larger than 3, but smaller than 4.
 2	The height limit of a bridge is 10 metres,\\pau=200\\ but the boat is more than 10 metres.\\pau=500\\ What should we do.
 2	Sam can trim 5 nails in 1 minute,\\pau=200\\ how many of his nails can he trim in 20 minutes.
+3	My sister is Leia.\\pau=500\\ We used to live together, but now I live in a new building.\\pau=500\\ Do you live with your family.
+3	What bad habits do you want to break?
+3	What do you like to do on the weekends?
+3	How would you describe yourself in 5 words?
+3	My favourite music is from the chemical brothers,\\pau=500\\ Who is your favourite band and how long have you been listening to them.
+3	What is your favourite song?\\pau=500\\ Why do you like it?\\pau=500\\ I like robot rock
+3	My favourite subject is human psychology, so I can understand people.\\pau=500\\ What was your favourite subject in school.
+3	What is your current occupation?\\pau=500\\ Mine is just being a robot.
+3	I was born in France.\\pau=500\\ Where were you born?
+3	When was the last time you tried something new?\\pau=500\\ What was it?
+3	What is your favourite hobby?\\pau=500\\ Do you do it often?\\pau=500\\ If you answer no, why not?
+3	My name is Luke,\\pau=500\\ what is your name?\\pau=500\\ What is its meaning.
+3	I am almost two years old.\\pau=500\\ How old are you?\\pau=500\\ When is your birthday?
+3	If your entire life was a movie, what would be the title.
+3	Do you live in the city.\\pau=500\\ Where do you prefer to live, City or country-side.
+3	What's the first thing you do when you wake up in the morning.

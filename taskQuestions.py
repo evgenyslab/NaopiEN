@@ -15,14 +15,17 @@ class taskQuestions:
         self.questionList = []
         taskLast = -1
         for x in range(0,len(lArr)):
-            task = int(lArr[x][0])
-            if task != taskLast:
-                count = 1
-            self.questionList.append((int(lArr[x][0]),count,lArr[x][1]))
-            taskLast = task
-            count +=1
+            try: # this will skip over lines with wrong formatting!
+                task = int(lArr[x][0]) 
+                if task != taskLast:
+                    count = 1
+                self.questionList.append((int(lArr[x][0]),count,lArr[x][1]))
+                taskLast = task
+                count +=1
+            except:
+                print "In parsing input Questions, line ", x, ' skipped!'
 
-        self.nlines = len(lArr)
+        self.nlines = len(self.questionList)
         self.nTasks = list(np.unique([self.questionList[x][0] for x in range(0,self.nlines)]))
         #print self.nTasks
         # this gets the number of questions for each task:

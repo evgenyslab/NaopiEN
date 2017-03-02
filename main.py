@@ -129,7 +129,7 @@ def main(NAOip=[], NAOport=[], name=[]):
         raw_input("DEBUG MOTIONS")
 
     #DEBUG MOTION ONLY
-    if True:
+    if False:
         while 1:
             for x in emotions:
                 if x == 'happy':
