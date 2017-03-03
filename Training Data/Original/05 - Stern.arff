@@ -1,0 +1,23 @@
+@relation stern
+@attribute task real
+@attribute prevEmotion real
+@attribute v real
+@attribute a real
+@attribute class {not-stern,stern}
+@data,
+3,1,-1,2,stern
+3,2,-1,-2,stern
+3,2,1,0,not-stern
+2,4,1,0,stern
+2,5,2,0,not-stern
+1,1,2,0,not-stern
+2,5,2,0,not-stern
+1,4,-1,0,stern
+1,4,-2,1,stern
+3,2,-2,1,not-stern
+3,4,-1,2,not-stern
+2,5,-1,2,stern
+1,2,-1,-2,stern
+3,1,-1,2,stern
+3,4,1,2,not-stern
+1,5,-1,-2,stern
