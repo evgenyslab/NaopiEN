@@ -5,6 +5,21 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os.path
 
+'''
+Evgeny Nuger - updated from FSM_Emotions
+
+This file is based on the plotting function written for FSM emotions that analyzes the experimental data.
+
+This function reads all available input data as csv files, parses the robot's emotions and the users affect and exports the data for weka processing.
+
+The input data is formatted in the following:
+
+##_r_m.csv -> robots file for morning interaction
+##_u_m.csv -> users affect file for morning interaction
+
+##_r_e.csv -> robots file for evening interaction
+##_u_e.csv -> users affect file for evening interaction
+'''
 
 
 
@@ -83,6 +98,7 @@ def formatRobotLog(csvList, timeStart, offsetHours = 5):
     # print '"' + interactionType + '"'
     return newRows, interactionType
 
+# PROCESS FOR MAPPING ROBOT EMOTION TO USER AFFECT
 def plotAffect(affectCSVList, robotCSVList, interactionType = "Morning", task=1):
     BVs = []
     BAs = []
@@ -201,18 +217,24 @@ def plotAffect(affectCSVList, robotCSVList, interactionType = "Morning", task=1)
     # print REs
     # print OEs
     REOEs, ts = colourREplotData(times, REs, OEs)
-    # need to trim REOEs that are <0
+    '''
+    EVGENY'S MODIFICATIONS BEGIN HERE!!!!
+    '''
+    # need to trim REOEs that are <0, this takes all time points in ts that are larger than or equal to 0:
     eTimePoints = [ts[x] for x in range(len(ts)) if ts[x]>=0]
-    R2 =  [[REOEs[y][x] for x in range(len(ts)) if ts[x] in eTimePoints] for y in range(10)]
     # raw_input("PAUSE")
     emotionsShort = ['happy','interested','sad','worried','stern']
-    emotions =emotionsShort*2
+    emotions =emotionsShort*2 # repeat emotionShort list
 
-
+    # Extract each emotion from REOEs:
     h, i, s, w, a, h2, i2, s2, w2, a2, sc1, sc2, sc3 = REOEs
 
     # so TS is the time step for REOEs
     # outputArray = [V,A,prevEmotion,V',A',currentEmotion]
+    '''
+    HERE I TRY TO TIME-ALIGN robot emotions to affect measurement times. There is a problem with the first if code.
+    Specifically, if there are more robot emotion time stamps than user-affect measurements, the data does not extract well due to mis-alignemnet of time stamps - this could be fixed later.
+    '''
     if (len(eTimePoints)>len(aff_times)):
         print "less affect measurments ADD CODE"
         pass
@@ -259,6 +281,9 @@ def plotAffect(affectCSVList, robotCSVList, interactionType = "Morning", task=1)
                 writer.writerow(x)
 
     else:
+        '''
+        This part of the code should work all the time, in this case, the user affect measurments are longer than the robot emotion measurements. This code was almost directly copied for the reverse case, which is why the reverse (if statment above) does not work as well.
+        '''
         print "less emotion measurements"
         #there are more affect measurements then emotion measurements, USE
         # EMOTION MEASUREMENTS
@@ -325,14 +350,16 @@ def colourREplotData(times, REs, OEs):
 
     return REOEs, ts
 
+# INSERTION POINT FOR PROGRAM IS HERE:
 if __name__ == '__main__':
-    offsetHours = 5
-    for x in range(1,32):
+    offsetHours = 5 # this is necessary as some of the files have 5 hour offset in log
+    for x in range(1,32): # range is set by the total number of user/robot interaction files availble
         affectFileNameM = "%02d_u_m.csv" %(x,)
         robotFileNameM = "%02d_r_m.csv" %(x,)
         affectFileNameE = "%02d_u_e.csv" %(x,)
         robotFileNameE = "%02d_r_e.csv" %(x,)
 
+        # set the file path to the user's and robots files for evening and morning cases:
         if os.path.isfile(affectFileNameM) and os.path.isfile(robotFileNameM):
             task = 1
             affectFileName = affectFileNameM
@@ -342,7 +369,12 @@ if __name__ == '__main__':
             affectFileName = affectFileNameE
             robotFileName = robotFileNameE
         print task, affectFileName, robotFileName
+        # Try to exctract the data.
+        '''
+        NOTE THAT DUE TO THE WAY DATA WAS COLLECTED, not all files could be easily parsed to located the robot's emotion at the time the user's affect is measured - this can be fixed in the future, and is explained in the plotAffect function.
+        '''
         try:
+            # Pre-processing the data (from old method)
             affectLog = importCSVFile(affectFileName)
             colsWant = ['BV', 'BA', 'vV', 'vA', 'MV', 'MA', 'absTime', 'usedV']
             affectLogAV = makeNewList(affectLog, colsWant)
@@ -351,7 +383,9 @@ if __name__ == '__main__':
             affectLogAV = makeNewList(affectLog, colsWant)
             robotLog = importCSVFile(robotFileName)
             robotLog, interactionType = formatRobotLog(robotLog, startTime, offsetHours)
+            # Run the processing to try to align the robot's emotion with the user's affect:
             plotAffect(affectLogAV, robotLog, interactionType, task)
         except:
+            # if the task failed, simply print where it failed
             print "something went wrong with user: ", x
     print "Done"
