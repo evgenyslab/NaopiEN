@@ -18,11 +18,20 @@ import random
 import datetime
 import csv
 
+# This class is custom written to parse input text.
 class Parser:
     import sys
     def __init__(self):
         pass
 
+    '''
+    A @staticmethod means that this function can be called without initializing
+    a class object, i.e. you can call this function in another piece of code as:
+    Parser.getChat(string,charaterList)
+    the string is the prompt string that will show up during runtime, the
+    charaterList is a list of charaters that the user can choose from. If none
+    of the available charatecters are input, the method rethrows the question.
+    '''
     @staticmethod
     def getChar(str="Please enter char: ", cRange = ('a','b','c')):
         ask = True
@@ -36,15 +45,17 @@ class Parser:
 
 def main(NAOip=[], NAOport=[], name=[]):
     ###---------- VARIABLE SETUP:
-    # first, generate a sequence of tasks questions
+    # first, generate a sequence of tasks questions using taskQuestions.py:
     trainingQuestions = taskQuestions.taskQuestions()
+    # get list of questions / task
     qMax = trainingQuestions.questionsPerTask
+    # Create a random integer array of pointers to unique questions for each task:
     questionsHigh = random.sample(range(1,qMax[0]),qMax[0]-1)
     questionsMed = random.sample(range(1,qMax[1]),qMax[1]-1)
     questionsLow = random.sample(range(1,qMax[2]),qMax[2]-1)
     # number of interactions in a sequence:
     sequenceLength = 20
-    # number of tasks:
+    # number of tasks - this should all be returned from taskQuestions.py:
     nTasks = 3
     tasks = ('H','M','L')
     logFilePath = "log.cvs"
@@ -53,6 +64,7 @@ def main(NAOip=[], NAOport=[], name=[]):
     # fearful = worried
     # Angry = stern
 
+    # initialize Nao class objects for motion, etc!
     naoMotions = BasicMotions(NAOip, NAOport) # should be able to use this...
     genUtil = GenUtil(naoMotions)
 
@@ -65,17 +77,23 @@ def main(NAOip=[], NAOport=[], name=[]):
     # this part of the code should really ensure that the total sequence length is not more than the sum for all the questions for each task type
     genOk = False
     print 'Generating uniform distribution of task questions for sequence...'
+    # WARNING: THIS CAN GET STUCK IN INIFNITE LOOP IF THE NUMBER OF TASKS IS TOO LARGE AND THE NUMBER OF QUESTIONS ITS TOO SMALL!
     while not genOk:
         genOk = True
+        # this line generates a sequence of tasks by rangdomly sampling the tasks for the total number of interactions in the sequeunce:
         taskSequence = [np.random.choice(range(1,nTasks+1)) for x in range(sequenceLength)]
+        # this line counts how many of each task there is in the task sequence
         taskQCount = np.asarray([len([x for x in range(sequenceLength) if taskSequence[x]==y]) for y in range(1,nTasks+1)])
-        #print taskQCount
+        # Check the standard deviation of the taskQCount, a high std.div means the task distribution is not uniform
         if np.std(taskQCount) > 0.6:
-            genOk = False
+            genOk = False # this is false until the task distribution is uniform
+            # NOTE: in certain cases, this condition may endlessly fail if the sequence length is too short or there are too many different tasks
     print 'Sequence: ', taskSequence, '\t historgram: ', taskQCount
     #---------- Generate emotion list:
     genOk = False
     print 'Generating uniform distribution of emotions questions for sequence...'
+    # This part of the code does the same thing as above, for for randomly distrubted emotions
+    # WARNING: THIS CAN GET STUCK IN INIFNITE LOOP IF THE NUMBER OF EMOTIONS IS TOO LARGE AND THE NUMBER OF QUESTIONS ITS TOO SMALL!
     while not genOk:
         genOk = True
         emotionSequence = [np.random.choice(range(0,len(emotions))) for x in range(sequenceLength)]
@@ -89,6 +107,7 @@ def main(NAOip=[], NAOport=[], name=[]):
     taskArray = [tasks[x-1] for x in taskSequence]
     # print taskArray
     # now need to sample the questions based for each task with no repeats:
+    # basically, for each question of a task, this process samples the randomly ordered questions from the task question list per task. This could be made more efficient/robust.
     qS2 = range(sequenceLength)
     qS3 = range(sequenceLength)
     j = np.array([0,0,0])
@@ -159,20 +178,13 @@ def main(NAOip=[], NAOport=[], name=[]):
             naoMotions.naoSayEmotion(sentence,'anger')
             raw_input("DEBUG MOTIONS")
 
-    #
-    # Do the same above task but inline - need lambda!
-    #print [qS3[i] = questionsHigh[j[0]] for i in range(sequenceLength) if taskSequence[i]==1]
-    #raw_input('')
-    #print qS2
-    # can do something like this to combine:
-    #taskQuestionSequence = [(taskArray[x]+str(qS2[x])) for x in range(0,sequenceLength)]
-    # 2xn array of task + question...maybe this should be 3xn with emotion too...
+    # Initialize a sequence list of tasks and questions.
     tqs = []
     tqs.append(taskSequence)
     tqs.append(qS2)
     # print tqs # first row is the task, second row is question
     # open log file:
-    # Write Sequence of tasks:
+    # Write Sequence of tasks for beginning of interaction
     ts = time.time()
     st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
     with open(logFilePath, 'a') as csvfile:
@@ -181,7 +193,7 @@ def main(NAOip=[], NAOport=[], name=[]):
         writer.writerow(['NEW INTERACTION SEQUENCE',taskSequence,qS2,emotionSequenceText, st])
 
 
-
+    # For each question in the sequence, run interaction instance with NAO:
     for x in range(0,sequenceLength):
         # randomly draw robot emotion:
         interactionInstance(naoMotions,genUtil,logFilePath,emotionSequenceText[x],tqs[0][x],tqs[1][x],trainingQuestions,x)
@@ -194,7 +206,7 @@ def main(NAOip=[], NAOport=[], name=[]):
         writer.writerow(['END OF INTERACTION SEQUENCE',taskSequence,qS2,emotionSequenceText, st])
         writer.writerow(['END OF INTERACTION SEQUENCE','TASK SECQUENCE','QUESTION SEQUENCE','EMOTION SEQUENCE', st])
 
-    # ENDING THANKYOUS
+    # ENDING THANK YOUS
     naoMotions.naoStand()
     formattedSentence = naoMotions.naoSayEmotion('Thank you for participating','happy', True)
     naoMotions.sayAndPlay('happy',formattedSentence)
@@ -204,7 +216,7 @@ def main(NAOip=[], NAOport=[], name=[]):
 def interactionInstance(naoMotions,genUtil,logFilePath, emotion, taskNum,questionNum,questionObj, interactionNumber):
     # get question string:
     qStr = questionObj.getQuestion(taskNum,questionNum)
-    # Get operator to press record to log the time for the users initial affect:
+    # Get operator to press record to log the time for the users initial affect, this will act as a code stop until the teleoperated presses 'r':
     Parser.getChar("press 'r' to record timestamp for initial affect:", 'r')
     # date-time stamp:
     ts = time.time()
@@ -216,7 +228,7 @@ def interactionInstance(naoMotions,genUtil,logFilePath, emotion, taskNum,questio
 
     print 'Robot will ask: ', qStr[0], '\nWith Emotion: ', emotion
     #print 'Question: ' interactionNumber
-    loopback = True
+    loopback = True # this is a repeat loop-back that will allow the nao to repeat questions
     while loopback:
         formattedSentence = naoMotions.naoSayEmotion(qStr[0],emotion, True)
         naoMotions.sayAndPlay(emotion,formattedSentence)
@@ -235,6 +247,7 @@ def interactionInstance(naoMotions,genUtil,logFilePath, emotion, taskNum,questio
         writer = csv.writer(csvfile, delimiter=',')
         writer.writerow([interactionNumber,'POST',taskNum,questionNum,qStr,emotion,ret,st])
 
+# test connection method from old code:
 def testNaoConnection(NAOip, NAOport):
     worked = False
     try:
@@ -262,7 +275,7 @@ def testNaoConnection(NAOip, NAOport):
     print "Connection Test Finished"
     return worked
 
-
+# from old code
 def connectToProxy(NAOip, NAOport, proxyName):
         try:
             proxy = ALProxy(proxyName, NAOip, NAOport)
@@ -273,15 +286,18 @@ def connectToProxy(NAOip, NAOport, proxyName):
 
         return proxy
 
+# from old code
 def getNAOIP():
     fileName = "ProgramDataFiles\_FSM_INPUT.json"
     jsInput = FileUtilitiy.readFileToJSON(fileName)
     naoIP = str(jsInput['naoIP'])
     return naoIP
 
+#from old code
 def exitingProgram():
     print "Program Exiting..."
 
+# Main Function, mostly from old code
 if __name__ == '__main__':
     simulated = False
     name = "NAO"
@@ -294,7 +310,7 @@ if __name__ == '__main__':
         #real NAO
         if useLuke:
             NAOIP = "luke.local"
-            NAOIP = "192.168.1.37"
+            #NAOIP = "192.168.1.37"
             name = "Luke"
         else:
             NAOIP = "leia.local"
